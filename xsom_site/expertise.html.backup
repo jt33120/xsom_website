@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Expertises – xSOM Consulting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Les domaines d'expertise de xSOM Consulting : stratégie SI, architecture, transformation, cloud, data, infrastructures.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/navbar.js" defer></script>
+    <script src="assets/js/footer.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="wrapper navbar">
+        <div class="logo">
+            <img src="assets/images/LOGO.png" alt="xSOM Consulting Logo">
+            <div>
+                <a href="index.html">xSOM Consulting</a>
+                <span>Conseil en informatique</span>
+            </div>
+        </div>
+        <div id="nav-container"></div>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="wrapper">
+            <h1 class="page-title">Nos expertises</h1>
+            <p class="page-subtitle">
+                xSOM Consulting couvre l’ensemble de la chaîne de valeur du système
+                d’information : de la stratégie à la mise en production, en passant
+                par la conception, les choix de solutions et la transformation des
+                organisations IT.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="wrapper">
+            <header class="section-header">
+                <div class="section-kicker">Interventions</div>
+                <h2 class="section-title">Domaines d’intervention</h2>
+            </header>
+
+            <div class="card-grid">
+                <article class="card">
+                    <div class="card-subtitle">Stratégie & gouvernance SI</div>
+                    <h3 class="card-title">Schémas directeurs & trajectoires</h3>
+                    <p class="card-text">
+                        Diagnostics SI, feuille de route pluriannuelle, alignement avec la
+                        stratégie d’entreprise, structuration des portefeuilles de projets,
+                        gouvernance IT et arbitrage des priorités.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-subtitle">Architecture</div>
+                    <h3 class="card-title">Architecture fonctionnelle & technique</h3>
+                    <p class="card-text">
+                        Urbanisation, cartographie applicative, architecture cible, cadrage
+                        d’API et d’intégration, refonte de socles techniques, étude d’impacts
+                        et accompagnement à la décision.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-subtitle">Infrastructures & cloud</div>
+                    <h3 class="card-title">Modernisation des plateformes</h3>
+                    <p class="card-text">
+                        Stratégie cloud, migration d’applications, hybridation,
+                        automatisation, performance, supervision et résilience
+                        des infrastructures.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-subtitle">Data & intégration</div>
+                    <h3 class="card-title">Valoriser et sécuriser les données</h3>
+                    <p class="card-text">
+                        Gouvernance de la donnée, architecture décisionnelle, flux
+                        d’échanges, qualité de données, accompagnement autour des
+                        usages data.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-subtitle">Accompagnement de projets</div>
+                    <h3 class="card-title">AMOA, cadrage & pilotage</h3>
+                    <p class="card-text">
+                        Expression de besoins, dossiers de choix, assistance à appel
+                        d’offres, structuration de la gouvernance projet, PMO,
+                        accompagnement au déploiement.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-subtitle">Organisation & processus IT</div>
+                    <h3 class="card-title">Faire évoluer les équipes et les pratiques</h3>
+                    <p class="card-text">
+                        Revue d’organisation, clarification des rôles, optimisation
+                        des processus IT (ITIL, DevOps…), animation de communautés
+                        et montée en compétences.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: #f9fbff;">
+        <div class="wrapper two-columns">
+            <div>
+                <header class="section-header">
+                    <div class="section-kicker">Formats d’intervention</div>
+                    <h2 class="section-title">Des missions adaptées à vos enjeux</h2>
+                </header>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Format</th>
+                            <th>Objectif</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Audit / diagnostic flash</td>
+                            <td>Obtenir rapidement une vision claire des forces, faiblesses et priorités.</td>
+                        </tr>
+                        <tr>
+                            <td>Cadrage de projet</td>
+                            <td>Sécuriser les choix structurants avant les engagements de budget.</td>
+                        </tr>
+                        <tr>
+                            <td>Accompagnement projet</td>
+                            <td>Disposer d’un partenaire sur la durée pour sécuriser le delivery.</td>
+                        </tr>
+                        <tr>
+                            <td>Coaching & support à la décision</td>
+                            <td>Challenger et éclairer les décisions clés des directions SI et métiers.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <div class="highlight-box">
+                    <strong>Vous avez un besoin spécifique ?</strong><br>
+                    Nous construisons également des dispositifs sur mesure, combinant cadrage,
+                    accompagnement opérationnel et transfert de compétences, en fonction de votre
+                    contexte et de vos priorités.
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer></footer>
+</body>
+</html>
