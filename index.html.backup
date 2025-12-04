@@ -171,15 +171,11 @@
             <div class="hero-metrics" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; max-width: 1000px; margin: 0 auto;">
                 <div>
                     <div class="metric-value" style="font-size: 2.5rem; color: var(--primary); font-weight: 700;">18 ans</div>
-                    <div class="metric-label" style="font-size: 0.9rem; color: var(--text-muted);">d'expérience<br><span style="font-size: 0.8rem;">(créé en 2007)</span></div>
-                </div>
-                <div>
-                    <div class="metric-value" style="font-size: 2.5rem; color: var(--primary); font-weight: 700;">+25</div>
-                    <div class="metric-label" style="font-size: 0.9rem; color: var(--text-muted);">ETPs</div>
+                    <div class="metric-label" style="font-size: 0.9rem; color: var(--text-muted);">d'expérience<br><span style="font-size: 0.8rem;">
                 </div>
                 <div>
                     <div class="metric-value" style="font-size: 2.5rem; color: var(--primary); font-weight: 700;">+100</div>
-                    <div class="metric-label" style="font-size: 0.9rem; color: var(--text-muted);">projets accompagnés</div>
+                    <div class="metric-label" style="font-size: 0.9rem; color: var(--text-muted);">projets et missions</div>
                 </div>
                 <div>
                     <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem;">
@@ -189,7 +185,7 @@
                             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                         </svg>
                     </div>
-                    <div class="metric-label" style="font-size: 0.9rem; color: var(--text-muted);">interventions<br>à l'international</div>
+                    <div class="metric-label" style="font-size: 0.9rem; color: var(--text-muted);">France et international</div>
                 </div>
             </div>
         </div>
