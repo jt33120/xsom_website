@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/navbar.js" defer></script>
     <script src="assets/js/footer.js" defer></script>
+    <script src="assets/js/translate.js" defer></script>
 </head>
 <body>
 <header>
@@ -16,7 +17,7 @@
             <img src="assets/images/LOGO.png" alt="xSOM Consulting Logo">
             <div>
                 <a href="index.html">xSOM Consulting</a>
-                <span>Conseil en informatique</span>
+                <span data-t-page="join-header-subtitle">Conseil en informatique</span>
             </div>
         </div>
         <div id="nav-container"></div>
@@ -28,90 +29,78 @@
     <section class="hero">
         <div class="wrapper hero-inner">
             <div>
-                <div class="hero-kicker">Cabinet de conseil</div>
-                <h1 class="hero-title">
-                    Gouvernance et stratégie
+                <div class="hero-kicker" data-t-page="index-hero-kicker">Cabinet de conseil</div>
+                <h1 class="hero-title" data-t-page="index-hero-title">
+                    Gouvernance et stratégie<br>
                     Cybersécurité
                 </h1>
-                <p class="hero-subtitle">
+                <p class="hero-subtitle" data-t-page="index-hero-subtitle">
                     Nous accompagnons les DSI, directions métiers et équipes projets dans la
                     conception, la sécurisation et la transformation de leurs systèmes d’information :
                     de la stratégie aux opérations.
                 </p>
 
                 <div class="hero-actions">
-                    <a href="expertise.html" class="btn btn-primary">Découvrir nos expertises</a>
+                    <a href="expertise.html" class="btn btn-primary" data-t-page="index-hero-btn">Découvrir nos expertises</a>
                 </div>
             </div>
 
             <aside class="hero-card" aria-label="Aperçu des interventions xSOM Consulting">
-                <div class="hero-card-title">Expertises techniques et fonctionnelles</div>
-
+                <div class="hero-card-title" data-t-page="index-card-title">Expertises techniques et fonctionnelles</div>
                 <div class="hero-metrics">
                     <div>
-                        <div class="metric-label">Conseil, stratégie et AMOA</div>
-                        <div class="metric-label">Management de transition</div>
-                        <div class="metric-label">Gouvernance de programmes de transformation</div>
-                        <div class="metric-label">Audit et conformité</div>
-                        <div class="metric-label">Urbanisation & Architecture SI</div>
-                        <div class="metric-label">Direction technique (CTO)</div>
-                        <div class="metric-label">Infrastructure</div>
-                        <div class="metric-label">Traitement de la dette</div>
+                        <div class="metric-label" data-t-page="index-card-metric1">Conseil, stratégie et AMOA</div>
+                        <div class="metric-label" data-t-page="index-card-metric2">Management de transition</div>
+                        <div class="metric-label" data-t-page="index-card-metric3">Gouvernance de programmes de transformation</div>
+                        <div class="metric-label" data-t-page="index-card-metric4">Audit et conformité</div>
+                        <div class="metric-label" data-t-page="index-card-metric5">Urbanisation & Architecture SI</div>
+                        <div class="metric-label" data-t-page="index-card-metric6">Direction technique (CTO)</div>
+                        <div class="metric-label" data-t-page="index-card-metric7">Infrastructure</div>
+                        <div class="metric-label" data-t-page="index-card-metric8">Traitement de la dette</div>
                     </div>
                 </div>
-
                 <div class="hero-tags">
-                    <span class="tag">Secteur public</span>
-                    <span class="tag">Énergie</span>
-                    <span class="tag">Banque & assurance</span>
-                    <span class="tag">Télécom</span>
-                    <span class="tag">Industrie</span>
-                    <span class="tag">Grande distribution</span>
+                    <span class="tag" data-t-page="index-tag-public">Secteur public</span>
+                    <span class="tag" data-t-page="index-tag-energie">Énergie</span>
+                    <span class="tag" data-t-page="index-tag-banque">Banque & assurance</span>
+                    <span class="tag" data-t-page="index-tag-telecom">Télécom</span>
+                    <span class="tag" data-t-page="index-tag-industrie">Industrie</span>
+                    <span class="tag" data-t-page="index-tag-distribution">Grande distribution</span>
                 </div>
             </aside>
-
         </div>
     </section>
 
-
-<section class="section metrics-section">
-    <div class="wrapper">
-
-        <div class="metrics-grid two-items">
-
-            <!-- Item 1 -->
-            <div class="metric">
-                <div class="metric-value">18 ans</div>
-                <div class="metric-label">
-                    d'expérience<br>
-                    <span>(créé en 2007)</span>
+    <section class="section metrics-section">
+        <div class="wrapper">
+            <div class="metrics-grid two-items">
+                <div class="metric">
+                    <div class="metric-value" data-t-page="index-metric-years">18 ans</div>
+                    <div class="metric-label" data-t-page="index-metric-exp">
+                        d'expérience<br>
+                        <span>(créé en 2007)</span>
+                    </div>
+                </div>
+                <div class="metric">
+                    <div class="metric-icon">
+                        <svg width="70" height="70" viewBox="0 0 24 24" fill="none" 
+                             stroke="currentColor" stroke-width="1.6">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+                    <div class="metric-label" data-t-page="index-metric-intl">
+                        Missions en France et à <br>à l'international
+                    </div>
                 </div>
             </div>
-
-            <!-- Item 2 -->
-            <div class="metric">
-                <div class="metric-icon">
-                    <svg width="70" height="70" viewBox="0 0 24 24" fill="none" 
-                         stroke="currentColor" stroke-width="1.6">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M2 12h20"/>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                    </svg>
-                </div>
-                <div class="metric-label">Missions en France et à <br>à l'international</div>
-            </div>
-
         </div>
+    </section>
 
-    </div>
-</section>
-
-
-
-        <!-- Partners Carousel -->
     <section class="section partners-section">
         <div class="wrapper">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;">Ils nous ont fait confiance</h2>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;" data-t-page="index-partners-title">Ils nous ont fait confiance</h2>
             <div class="partners-carousel">
                 <div class="partners-track">
                     <img src="assets/images/partenaires/Credit-Agricole-logo.png" alt="Crédit Agricole">
@@ -130,50 +119,46 @@
         </div>
     </section>
 
-    <!-- Expertises principales -->
     <section class="section expertise-section">
         <div class="wrapper">
             <header class="section-header" style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">
-                <div class="section-kicker">Nos expertises</div>
-                <h2 class="section-title" style="font-size: 2.2rem;">Un cabinet focalisé sur la performance de votre SI</h2>
-                <p class="section-description" style="margin: 0 auto;">
+                <div class="section-kicker" data-t-page="index-expertises-kicker">Pôle Télécom</div>
+                <h2 class="section-title" style="font-size: 2.2rem;" data-t-page="index-expertises-title">Un cabinet focalisé sur la performance de votre SI</h2>
+                <p class="section-description" style="margin: 0 auto;" data-t-page="index-expertises-desc">
                     Notre positionnement : un conseil opérationnel, proche des équipes, qui
                     s'inscrit dans la durée et s'adapte à la réalité de votre organisation.
                 </p>
             </header>
-
             <div class="expertise-grid">
                 <article class="expertise-card">
                     <div class="expertise-image" style="background-image: linear-gradient(rgba(27, 75, 122, 0.85), rgba(43, 106, 168, 0.85)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop');"></div>
                     <div class="expertise-content">
-                        <div class="card-subtitle">Stratégie & gouvernance</div>
-                        <h3 class="card-title">Aligner IT & enjeux métiers</h3>
-                        <p class="card-text">
+                        <div class="card-subtitle" data-t-page="index-exp1-sub">Stratégie & gouvernance</div>
+                        <h3 class="card-title" data-t-page="index-exp1-title">Aligner IT & enjeux métiers</h3>
+                        <p class="card-text" data-t-page="index-exp1-desc">
                             Gouvernance du SI, schémas directeurs, pilotage de projets complexes.
                             Assistance à maîtrise d'ouvrage, plans de continuité (PCA/PRA) et 
                             accompagnement Data Science & IA.
                         </p>
                     </div>
                 </article>
-
                 <article class="expertise-card">
                     <div class="expertise-image" style="background-image: linear-gradient(rgba(27, 75, 122, 0.85), rgba(43, 106, 168, 0.85)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=400&fit=crop');"></div>
                     <div class="expertise-content">
-                        <div class="card-subtitle">Architecture & technique</div>
-                        <h3 class="card-title">Concevoir des solutions robustes</h3>
-                        <p class="card-text">
+                        <div class="card-subtitle" data-t-page="index-exp2-sub">Architecture & technique</div>
+                        <h3 class="card-title" data-t-page="index-exp2-title">Concevoir des solutions robustes</h3>
+                        <p class="card-text" data-t-page="index-exp2-desc">
                             Urbanisation du SI, architecture applicative et technique. Direction technique (CTO),
                             programmes cyber réglementaires (LPM, DORA, NIS), analyse des risques et assistance à maîtrise d'œuvre.
                         </p>
                     </div>
                 </article>
-
                 <article class="expertise-card">
                     <div class="expertise-image" style="background-image: linear-gradient(rgba(27, 75, 122, 0.85), rgba(43, 106, 168, 0.85)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop');"></div>
                     <div class="expertise-content">
-                        <div class="card-subtitle">Transformation & opérations</div>
-                        <h3 class="card-title">Ancrer les changements dans la durée</h3>
-                        <p class="card-text">
+                        <div class="card-subtitle" data-t-page="index-exp3-sub">Transformation & opérations</div>
+                        <h3 class="card-title" data-t-page="index-exp3-title">Ancrer les changements dans la durée</h3>
+                        <p class="card-text" data-t-page="index-exp3-desc">
                             Modernisation des infrastructures, Green IT et gestion des obsolescences.
                             Formation (ITIL, CMMI, Agile, DevOps), structuration des équipes et 
                             accompagnement au changement.
@@ -181,9 +166,8 @@
                     </div>
                 </article>
             </div>
-
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="expertise.html" class="btn btn-primary btn-large">
+                <a href="expertise.html" class="btn btn-primary btn-large" data-t-page="index-exp-btn">
                     <span>Découvrir toutes nos expertises</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem;">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -193,20 +177,81 @@
         </div>
     </section>
 
-    <!-- Approche & secteurs -->
+    <section class="section data-ai-section">
+        <div class="wrapper">
+            <header class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 3rem;">
+                <div class="section-kicker" data-t-page="index-data-kicker">Nouveau pôle</div>
+                <h2 class="section-title" style="font-size: 2.2rem;" data-t-page="index-data-title">Stratégie Data & Intelligence Artificielle</h2>
+                <p class="section-description" style="margin: 0 auto;" data-t-page="index-data-desc">
+                    Nous élargissons nos expertises pour accompagner vos équipes dans la définition et l’exécution
+                    de stratégies Data & IA : de la vision à la mise en œuvre, avec une approche pragmatique et orientée résultats.
+                </p>
+            </header>
+            <div class="expertise-grid">
+                <article class="expertise-card">
+                    <div class="expertise-image" style="background-image: linear-gradient(rgba(27, 75, 122, 0.85), rgba(43, 106, 168, 0.85)), url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&h=400&fit=crop');"></div>
+                    <div class="expertise-content">
+                        <div class="card-subtitle" data-t-page="index-data1-sub">Data strategy</div>
+                        <h3 class="card-title" data-t-page="index-data1-title">Aligner la donnée avec les enjeux métiers</h3>
+                        <p class="card-text" data-t-page="index-data1-desc">
+                            Cadrage et feuille de route Data, gouvernance (data ownership, qualité, MDM),
+                            operating model (data office), priorisation des cas d’usage et trajectoire de valeur.
+                        </p>
+                    </div>
+                </article>
+                <article class="expertise-card">
+                    <div class="expertise-image" style="background-image: linear-gradient(rgba(27, 75, 122, 0.85), rgba(43, 106, 168, 0.85)), url('https://images.unsplash.com/photo-1555255707-c07966088b7b?w=800&h=400&fit=crop');"></div>
+                    <div class="expertise-content">
+                        <div class="card-subtitle" data-t-page="index-data2-sub">IA & industrialisation</div>
+                        <h3 class="card-title" data-t-page="index-data2-title">De la preuve de valeur au passage à l’échelle</h3>
+                        <p class="card-text" data-t-page="index-data2-desc">
+                            Définition des cas d’usage IA, cadrage (ROI/risques), MLOps & gouvernance,
+                            sécurité et conformité (incluant enjeux d’IA responsable), accompagnement du change.
+                        </p>
+                    </div>
+                </article>
+                <article class="expertise-card">
+                    <div class="expertise-image" style="background-image: linear-gradient(rgba(27, 75, 122, 0.85), rgba(43, 106, 168, 0.85)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop');"></div>
+                    <div class="expertise-content">
+                        <div class="card-subtitle" data-t-page="index-data3-sub">Plateformes & data products</div>
+                        <h3 class="card-title" data-t-page="index-data3-title">Architectures modernes et data mesh</h3>
+                        <p class="card-text" data-t-page="index-data3-desc">
+                            Cadrage de plateformes data (cloud/hybride), data products, interopérabilité,
+                            observabilité, et structuration des équipes (PO data, data engineering, analytics).
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="data-ai-badges" style="margin-top: 2.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem;">
+                <span class="tag" data-t-page="index-data-tag-biopharma">Biopharma</span>
+                <span class="tag" data-t-page="index-data-tag-mobilite">Mobilité</span>
+                <span class="tag" data-t-page="index-data-tag-public">Secteur public</span>
+                <span class="tag" data-t-page="index-data-tag-banque">Banque & assurance</span>
+                <span class="tag" data-t-page="index-data-tag-telecom">Télécom</span>
+            </div>
+            <div style="text-align: center; margin-top: 2.25rem;">
+                <a href="expertise.html#data-ai" class="btn btn-primary btn-large" data-t-page="index-data-btn">
+                    <span>Explorer notre offre Data & IA</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem;">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="section approach-section">
         <div class="wrapper">
             <div class="approach-grid">
                 <div class="approach-content">
                     <header class="section-header">
-                        <div class="section-kicker">Notre approche</div>
-                        <h2 class="section-title">Un conseil proche du terrain et orienté résultats</h2>
-                        <p class="section-description">
+                        <div class="section-kicker" data-t-page="index-approach-kicker">Notre approche</div>
+                        <h2 class="section-title" data-t-page="index-approach-title">Un conseil proche du terrain et orienté résultats</h2>
+                        <p class="section-description" data-t-page="index-approach-desc">
                             Chez xSOM Consulting, nous privilégions une approche pragmatique et collaborative,
                             adaptée aux réalités de votre organisation.
                         </p>
                     </header>
-
                     <ul class="list-check-modern">
                         <li>
                             <div class="check-icon">
@@ -215,8 +260,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <strong>Co-construction</strong>
-                                <p>Interventions menées aux côtés de vos équipes, en mode collaboratif.</p>
+                                <strong data-t-page="index-approach-co">Co-construction</strong>
+                                <p data-t-page="index-approach-co-desc">Interventions menées aux côtés de vos équipes, en mode collaboratif.</p>
                             </div>
                         </li>
                         <li>
@@ -226,8 +271,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <strong>Pragmatisme</strong>
-                                <p>Prise en compte des contraintes opérationnelles et budgétaires dès le cadrage.</p>
+                                <strong data-t-page="index-approach-prag">Pragmatisme</strong>
+                                <p data-t-page="index-approach-prag-desc">Prise en compte des contraintes opérationnelles et budgétaires dès le cadrage.</p>
                             </div>
                         </li>
                         <li>
@@ -237,8 +282,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <strong>Transparence</strong>
-                                <p>Communication claire sur les enjeux, les risques et les arbitrages à prendre.</p>
+                                <strong data-t-page="index-approach-transp">Transparence</strong>
+                                <p data-t-page="index-approach-transp-desc">Communication claire sur les enjeux, les risques et les arbitrages à prendre.</p>
                             </div>
                         </li>
                         <li>
@@ -248,13 +293,12 @@
                                 </svg>
                             </div>
                             <div>
-                                <strong>Livrables actionnables</strong>
-                                <p>Documents clairs, exploitables et réutilisables par vos équipes.</p>
+                                <strong data-t-page="index-approach-livr">Livrables actionnables</strong>
+                                <p data-t-page="index-approach-livr-desc">Documents clairs, exploitables et réutilisables par vos équipes.</p>
                             </div>
                         </li>
                     </ul>
                 </div>
-
                 <div class="approach-sidebar">
                     <div class="sectors-box">
                         <div class="sectors-icon">
@@ -264,24 +308,23 @@
                                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
                             </svg>
                         </div>
-                        <h3>Secteurs d'intervention</h3>
+                        <h3 data-t-page="index-sectors-title">Secteurs d'intervention</h3>
                         <div class="sectors-tags">
-                            <span class="sector-tag">Secteur Public</span>
-                            <span class="sector-tag">Énergie</span>
-                            <span class="sector-tag">Banque & Assurance</span>
-                            <span class="sector-tag">Télécommunication</span>
-                            <span class="sector-tag">Grande Distribution</span>
-                            <span class="sector-tag">Industrie</span>
+                            <span class="sector-tag" data-t-page="index-sector-public">Secteur Public</span>
+                            <span class="sector-tag" data-t-page="index-sector-energie">Énergie</span>
+                            <span class="sector-tag" data-t-page="index-sector-banque">Banque & Assurance</span>
+                            <span class="sector-tag" data-t-page="index-sector-telecom">Télécommunication</span>
+                            <span class="sector-tag" data-t-page="index-sector-distribution">Grande Distribution</span>
+                            <span class="sector-tag" data-t-page="index-sector-industrie">Industrie</span>
                         </div>
                     </div>
-
                     <div class="missions-box">
-                        <h4>Types de missions</h4>
+                        <h4 data-t-page="index-missions-title">Types de missions</h4>
                         <ul>
-                            <li>Audits & cadrages</li>
-                            <li>AMOA & PMO</li>
-                            <li>Assistance à maîtrise d'œuvre</li>
-                            <li>Accompagnement long terme</li>
+                            <li data-t-page="index-mission1">Audits & cadrages</li>
+                            <li data-t-page="index-mission2">AMOA & PMO</li>
+                            <li data-t-page="index-mission3">Assistance à maîtrise d'œuvre</li>
+                            <li data-t-page="index-mission4">Accompagnement long terme</li>
                         </ul>
                     </div>
                 </div>
@@ -289,26 +332,22 @@
         </div>
     </section>
 
-    <!-- Rejoindre xSOM -->
     <section class="section" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: #ffffff; min-height: 60vh; display: flex; align-items: center; padding: 6rem 0;">
         <div class="wrapper" style="text-align: center; max-width: 800px;">
-            <div class="section-kicker" style="color: rgba(255, 255, 255, 0.8);">Carrières</div>
-            <h2 class="section-title" style="color: #ffffff; font-size: 2rem; margin-bottom: 1rem;">
+            <div class="section-kicker" style="color: rgba(255, 255, 255, 0.8);" data-t-page="index-join-kicker">Carrières</div>
+            <h2 class="section-title" style="color: #ffffff; font-size: 2rem; margin-bottom: 1rem;" data-t-page="index-join-title">
                 Rejoignez nos équipes
             </h2>
-            <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem; color: rgba(255, 255, 255, 0.9);">
+            <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem; color: rgba(255, 255, 255, 0.9);" data-t-page="index-join-desc">
                 Vous êtes consultant(e) expérimenté(e) en SI et souhaitez rejoindre une équipe à taille humaine,
                 orientée expertise et accompagnement durable ? Découvrez nos opportunités.
             </p>
-            <a href="join.html" class="btn btn-ghost" style="background: #ffffff; color: var(--primary); border-color: #ffffff;">
+            <a href="join.html" class="btn btn-ghost" style="background: #ffffff; color: var(--primary); border-color: #ffffff;" data-t-page="index-join-btn">
                 Voir nos offres
             </a>
         </div>
     </section>
-
-    
 </main>
-
 <footer></footer>
 </body>
 </html>

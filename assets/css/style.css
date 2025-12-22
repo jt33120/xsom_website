@@ -136,6 +136,33 @@ header {
     font-size: 0.85rem;
 }
 
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    gap: 0.3rem;
+    margin-left: 1.5rem;
+    align-items: center;
+}
+
+.lang-btn {
+    background: #f5f7fb;
+    border: 1px solid var(--primary-light);
+    color: var(--primary-light);
+    font-size: 0.92em;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 0.2em 0.8em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.lang-btn.active,
+.lang-btn:hover {
+    background: var(--primary-light);
+    color: #fff;
+    border-color: var(--primary);
+}
+
 /* --------------------
    Hero / sections
 --------------------- */
@@ -343,32 +370,36 @@ header {
 /* Sections génériques */
 
 .section {
-    padding: 3rem 0;
+    padding: 4rem 0 4rem 0;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(27, 75, 122, 0.07);
+    margin-bottom: 2.5rem;
+}
+
+.section[style*="background: #f9fbff"] {
+    background: linear-gradient(180deg, #f9fbff 0%, #e7f1ff 100%);
+    box-shadow: 0 4px 24px rgba(27, 75, 122, 0.05);
 }
 
 .section-header {
-    margin-bottom: 1.8rem;
-}
-
-.section-kicker {
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    font-size: 0.78rem;
-    color: var(--primary-light);
-    margin-bottom: 0.4rem;
-    font-weight: 600;
+    margin-bottom: 2.5rem;
+    text-align: center;
 }
 
 .section-title {
-    font-size: 1.6rem;
-    margin-bottom: 0.4rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.6rem;
 }
 
 .section-description {
     color: var(--text-muted);
-    max-width: 35rem;
-    font-size: 0.95rem;
-    line-height: 1.7;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 700px;
 }
 
 /* Enhanced Expertise Section */
@@ -666,12 +697,14 @@ header {
 /* Blocs info */
 
 .highlight-box {
-    background: var(--bg-light);
-    border-radius: var(--radius);
-    padding: 1rem 1.2rem;
-    border: 1px dashed var(--border-soft);
-    font-size: 0.9rem;
-    color: var(--text-muted);
+    background: linear-gradient(135deg, #f9fbff 0%, #e7f1ff 100%);
+    border-radius: 14px;
+    padding: 1.5rem 1.7rem;
+    border: 1.5px dashed var(--primary-light);
+    color: var(--primary);
+    font-size: 1.05rem;
+    box-shadow: 0 2px 12px rgba(27, 75, 122, 0.06);
+    margin-bottom: 1.5rem;
 }
 
 .linkedin-link {
@@ -771,40 +804,18 @@ textarea {
 /* Footer */
 
 footer {
-    border-top: 1px solid var(--border-soft);
-    padding: 1.5rem 0 2rem;
+    background: linear-gradient(90deg, #f9fbff 0%, #e7f1ff 100%);
+    border-top: 1.5px solid var(--primary-light);
+    padding: 2rem 0 2.5rem;
     margin-top: 2rem;
-    font-size: 0.85rem;
-    color: var(--text-muted);
+    font-size: 1rem;
+    color: var(--primary);
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 -4px 16px rgba(27, 75, 122, 0.07);
 }
 
 .footer-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.footer-links {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.footer-separator {
-    color: var(--border-soft);
-}
-
-.footer-linkedin {
-    display: inline-flex;
-    align-items: center;
-    color: var(--text-muted);
-    transition: color var(--transition);
-}
-
-.footer-linkedin:hover {
-    color: #0077b5;
+    gap: 2rem;
 }
 
 /* Pages : bannières */
@@ -853,6 +864,19 @@ footer {
     .approach-section {
         min-height: auto;
         padding: 4rem 0;
+    }
+
+    .section, .metrics-section {
+        padding: 2.5rem 0;
+        border-radius: 10px;
+    }
+    .card, .expertise-card, .metric {
+        padding: 1.2rem 1rem;
+        border-radius: 10px;
+    }
+    .highlight-box {
+        padding: 1rem 1rem;
+        border-radius: 10px;
     }
 }
 
@@ -920,8 +944,10 @@ footer {
 /* Partners Carousel */
 
 .partners-section {
-    background: #ffffff;
-    overflow: hidden;
+    background: linear-gradient(90deg, #f9fbff 0%, #e7f1ff 100%);
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(27, 75, 122, 0.07);
+    margin-bottom: 2.5rem;
 }
 
 .partners-carousel {
@@ -944,11 +970,16 @@ footer {
     filter: grayscale(100%);
     opacity: 0.6;
     transition: all 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(27, 75, 122, 0.08);
+    background: #fff;
+    padding: 0.5rem;
 }
 
 .partners-track img:hover {
     filter: grayscale(0%);
     opacity: 1;
+    box-shadow: 0 8px 24px rgba(27, 75, 122, 0.18);
 }
 
 @keyframes scroll {
@@ -969,8 +1000,10 @@ footer {
 -------------------------- */
 
 .metrics-section {
-    background: linear-gradient(135deg, #E7F1FF 0%, #D5E7FF 40%, #C7E0FF 100%);
-    padding: 4rem 0;
+    background: linear-gradient(135deg, #e7f1ff 0%, #d5e7ff 100%);
+    padding: 5rem 0;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(27, 75, 122, 0.07);
 }
 
 .metrics-grid {
@@ -1120,4 +1153,16 @@ footer {
         grid-template-columns: 1fr;
         gap: 30px;
     }
+}
+
+.data-ai-section {
+  background: #ffffff;
+}
+
+.data-ai-section .section-header .section-description {
+  max-width: 780px;
+}
+
+.data-ai-section .data-ai-badges .tag {
+  border: 1px solid rgba(27, 75, 122, 0.18);
 }

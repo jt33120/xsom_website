@@ -2,21 +2,29 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Nous rejoindre – xSOM Consulting</title>
+    <title data-t-page="join-title">Nous rejoindre – xSOM Consulting</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Rejoindre xSOM Consulting : un cabinet de conseil en informatique à taille humaine.">
+
+    <!-- translatable meta description -->
+    <meta name="description" data-t-page="join-meta-desc"
+          content="Rejoindre xSOM Consulting : un cabinet de conseil en informatique à taille humaine.">
+
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/navbar.js" defer></script>
     <script src="assets/js/footer.js" defer></script>
+    <script src="assets/js/translate.js" defer></script>
 </head>
 <body>
 <header>
     <div class="wrapper navbar">
         <div class="logo">
-            <img src="assets/images/LOGO.png" alt="xSOM Consulting Logo">
+            <img src="assets/images/LOGO.png"
+                 alt="xSOM Consulting Logo"
+                 data-t-page="join-logo-alt"
+                 data-t-attr="alt">
             <div>
                 <a href="index.html">xSOM Consulting</a>
-                <span>Conseil en informatique</span>
+                <span data-t-page="join-header-subtitle">Conseil en informatique</span>
             </div>
         </div>
         <div id="nav-container"></div>
@@ -26,15 +34,15 @@
 <main>
     <section class="page-hero">
         <div class="wrapper">
-            <h1 class="page-title">Nous rejoindre</h1>
+            <h1 class="page-title" data-t-page="join-hero-title">Nous rejoindre</h1>
         </div>
     </section>
 
     <section class="section" style="background: var(--bg-light);">
         <div class="wrapper">
             <header class="section-header" style="text-align: center;">
-                <div class="section-kicker">Opportunités</div>
-                <h2 class="section-title">Offres actuelles</h2>
+                <div class="section-kicker" data-t-page="join-opps-kicker">Opportunités</div>
+                <h2 class="section-title" data-t-page="join-opps-title">Offres actuelles</h2>
             </header>
 
             <div style="max-width: 700px; margin: 0 auto;">
@@ -43,23 +51,36 @@
                         <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                         <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                     </svg>
-                    
-                    <h3 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 0.8rem;">
+
+                    <h3 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 0.8rem;"
+                        data-t-page="join-no-offers-title">
                         Aucune offre en ce moment
                     </h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;"
+                       data-t-page="join-no-offers-desc">
                         Nous n'avons pas d'offre publiée actuellement, mais nous sommes toujours
                         intéressés par les profils de qualité. N'hésitez pas à nous envoyer une
                         candidature spontanée ci-dessous ou à nous suivre sur LinkedIn.
                     </p>
-                    
+
                     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <a href="#candidature" class="btn btn-primary">Candidature spontanée</a>
-                        <a href="https://www.linkedin.com/company/xsom-consulting" target="_blank" rel="noopener" class="linkedin-link" style="margin-top: 0;">
+                        <a href="#candidature" class="btn btn-primary" data-t-page="join-spontaneous-btn">
+                            Candidature spontanée
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/xsom-consulting"
+                           target="_blank"
+                           rel="noopener"
+                           class="linkedin-link"
+                           style="margin-top: 0;"
+                           aria-label="Suivre sur LinkedIn"
+                           data-t-page="join-linkedin-aria"
+                           data-t-attr="aria-label">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem;">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.27-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
-                            Suivre sur LinkedIn
+                            <span data-t-page="join-linkedin-text">Suivre sur LinkedIn</span>
                         </a>
                     </div>
                 </div>
@@ -71,18 +92,20 @@
         <div class="wrapper two-columns">
             <div>
                 <header class="section-header">
-                    <div class="section-kicker">Pourquoi xSOM Consulting</div>
-                    <h2 class="section-title">Construire sa trajectoire dans un cabinet à taille humaine</h2>
+                    <div class="section-kicker" data-t-page="join-why-kicker">Pourquoi xSOM Consulting</div>
+                    <h2 class="section-title" data-t-page="join-why-title">
+                        Construire sa trajectoire dans un cabinet à taille humaine
+                    </h2>
                 </header>
 
                 <ul class="list-check">
-                    <li>Des missions variées : audits, cadrages, architecture, pilotage de projets…</li>
-                    <li>Une forte proximité avec les décideurs et les équipes clientes.</li>
-                    <li>La possibilité de contribuer directement au développement du cabinet.</li>
-                    <li>Une culture de la transmission et du partage d’expérience.</li>
+                    <li data-t-page="join-bullet-1">Des missions variées : audits, cadrages, architecture, pilotage de projets…</li>
+                    <li data-t-page="join-bullet-2">Une forte proximité avec les décideurs et les équipes clientes.</li>
+                    <li data-t-page="join-bullet-3">La possibilité de contribuer directement au développement du cabinet.</li>
+                    <li data-t-page="join-bullet-4">Une culture de la transmission et du partage d’expérience.</li>
                 </ul>
 
-                <p class="section-description">
+                <p class="section-description" data-t-page="join-profile-desc">
                     Nous recherchons des profils curieux, autonomes, avec une vraie envie de
                     comprendre les enjeux métiers derrière les sujets techniques.
                 </p>
@@ -90,105 +113,35 @@
 
             <div>
                 <div class="form-card">
-                    <h2 class="section-title" style="font-size: 1.2rem; margin-bottom: 0.8rem;">
+                    <h2 class="section-title" style="font-size: 1.2rem; margin-bottom: 0.8rem;"
+                        data-t-page="join-apply-title">
                         Candidature spontanée
                     </h2>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
-                        Vous pouvez nous adresser votre CV et quelques lignes sur votre projet
-                        professionnel via ce formulaire.
-                    </p>
 
-                    <!-- FORMULAIRE -->
-                    <form action="send_mail.php" method="post" id="candidature-form" enctype="multipart/form-data">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="nom">Nom*</label>
-                                <input type="text" id="nom" name="nom" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="prenom">Prénom*</label>
-                                <input type="text" id="prenom" name="prenom" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">E-mail du candidat*</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="profil">Profil</label>
-                                <select id="profil" name="profil">
-                                    <option value="">Sélectionnez…</option>
-                                    <option value="consultant">Consultant(e)</option>
-                                    <option value="architecte">Architecte</option>
-                                    <option value="chef-de-projet">Chef de projet</option>
-                                    <option value="autre">Autre profil IT</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Votre projet / vos attentes*</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-
-                        <!-- Limite côté serveur : 5 Mo -->
-                        <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
-
-                        <div class="form-group">
-                            <label for="cv">Votre CV (PDF, max 5 Mo)</label>
-                            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
-                        </div>
-
-                        <div id="form-feedback" style="display:none; font-size:0.9rem; margin-bottom:0.8rem;"></div>
-
-                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.8rem;">
-                            *Champs obligatoires – Votre candidature sera transmise directement à nos équipes.
+                    <div class="highlight-box" style="padding:1rem;">
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;"
+                           data-t-page="join-apply-desc">
+                            Envoyez-nous directement un email avec votre CV en pièce jointe.
                         </p>
 
-                        <button type="submit" class="btn btn-primary">Envoyer ma candidature</button>
-                    </form>
+                        <!-- Mailto becomes dynamic in translate.js -->
+                        <a class="btn btn-primary"
+                           data-mailto-base="mailto:jean-philippe.talou@xsom.fr"
+                           data-mailto-subject-key="join-mailto-subject"
+                           data-mailto-body-key="join-mailto-body"
+                           href="mailto:jean-philippe.talou@xsom.fr?subject=%5BCandidature%5D%20xSOM%20Consulting&body=%C3%89crivez%20quelques%20lignes%20sur%20votre%20profil%20et%20vos%20attentes.%0A%0ANB%20%3A%20pensez%20%C3%A0%20joindre%20votre%20CV."
+                           data-t-page="join-apply-btn">
+                            Envoyer ma candidature par email
+                        </a>
 
-                    <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const form = document.getElementById('candidature-form');
-                        const feedback = document.getElementById('form-feedback');
-
-                        if (!form) return;
-
-                        form.addEventListener('submit', async function (e) {
-                            e.preventDefault();
-
-                            feedback.style.display = 'block';
-                            feedback.style.color = '';
-                            feedback.textContent = 'Envoi en cours…';
-
-                            try {
-                                const res = await fetch(form.action, {
-                                    method: 'POST',
-                                    body: new FormData(form)
-                                });
-
-                                const text = await res.text();
-
-                                if (res.ok && text.trim() === 'OK') {
-                                    feedback.style.color = 'green';
-                                    feedback.textContent = 'Merci, votre candidature a bien été envoyée.';
-                                    form.reset();
-                                } else {
-                                    feedback.style.color = 'red';
-                                    feedback.textContent = text || 'Une erreur est survenue lors de l’envoi.';
-                                }
-                            } catch (err) {
-                                feedback.style.color = 'red';
-                                feedback.textContent = 'Erreur réseau. Veuillez réessayer plus tard.';
-                            }
-                        });
-                    });
-                    </script>
+                        <div style="margin-top: .9rem; font-size: .85rem; opacity: .8;"
+                             data-t-page="join-apply-note">
+                            Pensez à joindre votre CV.
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 </main>
