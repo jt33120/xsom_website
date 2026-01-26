@@ -11,9 +11,12 @@
           content="Découvrez l'histoire, les valeurs et la façon de travailler du cabinet xSOM Consulting.">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="assets/js/navbar.js" defer></script>
     <script src="assets/js/footer.js" defer></script>
     <script src="assets/js/translate.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
 </head>
 <body>
 <header>
@@ -33,7 +36,7 @@
 </header>
 
 <main>
-    <section class="page-hero">
+    <section class="page-hero animate-on-scroll" data-animate="fade-up">
         <div class="wrapper">
             <h1 class="page-title" data-t-page="about-title">Qui nous sommes</h1>
             <p class="page-subtitle" data-t-page="about-subtitle">
@@ -44,30 +47,27 @@
     </section>
 
     <section class="section">
-        <div class="wrapper two-columns">
+        <div class="wrapper two-columns animate-on-scroll" data-animate="fade-up">
             <div>
-                <header class="section-header">
+                <header class="section-header animate-on-scroll" data-animate="fade-up">
                     <div class="section-kicker" data-t-page="about-identity-kicker">Notre identité</div>
                     <h2 class="section-title" data-t-page="about-identity-title">
                         Un cabinet à taille humaine, proche de ses clients
                     </h2>
                 </header>
-
                 <p class="section-description" data-t-page="about-identity-p1">
                     Nous intervenons auprès de directions informatiques et métiers qui souhaitent
                     sécuriser leurs décisions, structurer leurs projets et accélérer leur
                     transformation numérique, sans perdre en maîtrise.
                 </p>
-
                 <p class="section-description" data-t-page="about-identity-p2">
                     Notre différence : la capacité à combiner expérience de terrain, vision
                     d’architecture et accompagnement au changement pour transformer les idées en
                     résultats concrets.
                 </p>
             </div>
-
             <div>
-                <div class="card">
+                <div class="card premium-card animate-on-scroll" data-animate="fade-up">
                     <div class="card-subtitle" data-t-page="about-principles-subtitle">Nos principes</div>
                     <h3 class="card-title" data-t-page="about-principles-title">Ce qui guide nos missions</h3>
                     <ul class="list-check">
@@ -82,18 +82,16 @@
     </section>
 
     <section class="section metrics-section">
-        <div class="wrapper">
+        <div class="wrapper animate-on-scroll" data-animate="fade-up">
             <div class="metrics-grid two-items">
-
-                <div class="metric">
-                    <div class="metric-value" data-t-page="about-metric-years">18 ans</div>
+                <div class="metric animate-on-scroll" data-animate="fade-up">
+                    <div class="metric-value counter" data-t-page="about-metric-years">18 ans</div>
                     <div class="metric-label" data-t-page="about-metric-exp">
                         d'expérience<br>
                         <span>(créé en 2007)</span>
                     </div>
                 </div>
-
-                <div class="metric">
+                <div class="metric animate-on-scroll" data-animate="fade-up">
                     <div class="metric-icon">
                         <svg width="70" height="70" viewBox="0 0 24 24" fill="none"
                              stroke="currentColor" stroke-width="1.6" aria-hidden="true">
@@ -104,20 +102,18 @@
                     </div>
                     <div class="metric-label" data-t-page="about-metric-intl">Interventions<br>à l'international</div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <section class="section" style="background: #f9fbff;">
-        <div class="wrapper">
-            <header class="section-header">
+        <div class="wrapper animate-on-scroll" data-animate="fade-up">
+            <header class="section-header animate-on-scroll" data-animate="fade-up">
                 <div class="section-kicker" data-t-page="about-values-kicker">Nos valeurs</div>
                 <h2 class="section-title" data-t-page="about-values-title">Engagés, exigeants et accessibles</h2>
             </header>
-
             <div class="card-grid">
-                <article class="card">
+                <article class="card premium-card animate-on-scroll" data-animate="fade-up">
                     <h3 class="card-title" data-t-page="about-value-1-title">Engagement</h3>
                     <p class="card-text" data-t-page="about-value-1-text">
                         Nous nous impliquons réellement dans les projets que nous accompagnons,
@@ -125,16 +121,14 @@
                         mises en œuvre réussies.
                     </p>
                 </article>
-
-                <article class="card">
+                <article class="card premium-card animate-on-scroll" data-animate="fade-up">
                     <h3 class="card-title" data-t-page="about-value-2-title">Exigence</h3>
                     <p class="card-text" data-t-page="about-value-2-text">
                         Qualité des analyses, précision des livrables, rigueur dans la conduite
                         des projets : nous portons un soin particulier à chaque étape de la mission.
                     </p>
                 </article>
-
-                <article class="card">
+                <article class="card premium-card animate-on-scroll" data-animate="fade-up">
                     <h3 class="card-title" data-t-page="about-value-3-title">Proximité</h3>
                     <p class="card-text" data-t-page="about-value-3-text">
                         Nous travaillons en binôme avec vos équipes, dans un climat de confiance

@@ -41,11 +41,20 @@
     ];
 
     function initScrollAnimations() {
+        // Observe elements that already have animate-on-scroll class
+        document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
+            el.style.transitionDelay = `${index * 0.1}s`;
+            revealOnScroll.observe(el);
+        });
+        
+        // Also observe specific elements without the class
         animateElements.forEach(selector => {
             document.querySelectorAll(selector).forEach((el, index) => {
-                el.classList.add('animate-on-scroll');
-                el.style.transitionDelay = `${index * 0.1}s`;
-                revealOnScroll.observe(el);
+                if (!el.classList.contains('animate-on-scroll')) {
+                    el.classList.add('animate-on-scroll');
+                    el.style.transitionDelay = `${index * 0.1}s`;
+                    revealOnScroll.observe(el);
+                }
             });
         });
     }
@@ -286,11 +295,21 @@
         initSmoothScroll();
         initStaggerAnimations();
         initLazyLoading();
+        initCounterAnimations();
         
         // Optional advanced effects (can be disabled for performance)
         // initMagneticButtons();
         // initScrollProgress();
-        // initCounterAnimations();
+        
+        // Force visibility check for elements already in viewport
+        setTimeout(() => {
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.add('visible');
+                }
+            });
+        }, 100);
     }
 
     // Start initialization
