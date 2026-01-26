@@ -10,9 +10,12 @@
           content="Rejoindre xSOM Consulting : un cabinet de conseil en informatique à taille humaine.">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="assets/js/navbar.js" defer></script>
     <script src="assets/js/footer.js" defer></script>
     <script src="assets/js/translate.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
 </head>
 <body>
 <header>
@@ -32,43 +35,38 @@
 </header>
 
 <main>
-    <section class="page-hero">
+    <section class="page-hero " data-animate="fade-up">
         <div class="wrapper">
             <h1 class="page-title" data-t-page="join-hero-title">Nous rejoindre</h1>
         </div>
     </section>
 
     <section class="section" style="background: var(--bg-light);">
-        <div class="wrapper">
-            <header class="section-header" style="text-align: center;">
+        <div class="wrapper " data-animate="fade-up">
+            <header class="section-header " data-animate="fade-up" style="text-align: center;">
                 <div class="section-kicker" data-t-page="join-opps-kicker">Opportunités</div>
                 <h2 class="section-title" data-t-page="join-opps-title">Offres actuelles</h2>
             </header>
-
             <div style="max-width: 700px; margin: 0 auto;">
-                <div class="highlight-box" style="text-align: center; padding: 2rem; border-style: solid;">
+                <div class="highlight-box " data-animate="fade-up" style="text-align: center; padding: 2rem; border-style: solid;">
                     <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--primary); margin-bottom: 1rem;">
                         <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                         <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                     </svg>
-
                     <h3 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 0.8rem;"
                         data-t-page="join-no-offers-title">
                         Aucune offre en ce moment
                     </h3>
-
                     <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;"
                        data-t-page="join-no-offers-desc">
                         Nous n'avons pas d'offre publiée actuellement, mais nous sommes toujours
                         intéressés par les profils de qualité. N'hésitez pas à nous envoyer une
                         candidature spontanée ci-dessous ou à nous suivre sur LinkedIn.
                     </p>
-
                     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <a href="#candidature" class="btn btn-primary" data-t-page="join-spontaneous-btn">
+                        <a href="#candidature" class="btn btn-primary magnetic-btn" data-t-page="join-spontaneous-btn">
                             Candidature spontanée
                         </a>
-
                         <a href="https://www.linkedin.com/company/xsom-consulting"
                            target="_blank"
                            rel="noopener"
@@ -89,43 +87,38 @@
     </section>
 
     <section class="section" id="candidature">
-        <div class="wrapper two-columns">
+        <div class="wrapper two-columns " data-animate="fade-up">
             <div>
-                <header class="section-header">
+                <header class="section-header " data-animate="fade-up">
                     <div class="section-kicker" data-t-page="join-why-kicker">Pourquoi xSOM Consulting</div>
                     <h2 class="section-title" data-t-page="join-why-title">
                         Construire sa trajectoire dans un cabinet à taille humaine
                     </h2>
                 </header>
-
                 <ul class="list-check">
                     <li data-t-page="join-bullet-1">Des missions variées : audits, cadrages, architecture, pilotage de projets…</li>
                     <li data-t-page="join-bullet-2">Une forte proximité avec les décideurs et les équipes clientes.</li>
                     <li data-t-page="join-bullet-3">La possibilité de contribuer directement au développement du cabinet.</li>
                     <li data-t-page="join-bullet-4">Une culture de la transmission et du partage d’expérience.</li>
                 </ul>
-
                 <p class="section-description" data-t-page="join-profile-desc">
                     Nous recherchons des profils curieux, autonomes, avec une vraie envie de
                     comprendre les enjeux métiers derrière les sujets techniques.
                 </p>
             </div>
-
             <div>
-                <div class="form-card">
+                <div class="form-card premium-card " data-animate="fade-up">
                     <h2 class="section-title" style="font-size: 1.2rem; margin-bottom: 0.8rem;"
                         data-t-page="join-apply-title">
                         Candidature spontanée
                     </h2>
-
-                    <div class="highlight-box" style="padding:1rem;">
+                    <div class="highlight-box " data-animate="fade-up" style="padding:1rem;">
                         <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;"
                            data-t-page="join-apply-desc">
                             Envoyez-nous directement un email avec votre CV en pièce jointe.
                         </p>
-
                         <!-- Mailto becomes dynamic in translate.js -->
-                        <a class="btn btn-primary"
+                        <a class="btn btn-primary magnetic-btn"
                            data-mailto-base="mailto:jean-philippe.talou@xsom.fr"
                            data-mailto-subject-key="join-mailto-subject"
                            data-mailto-body-key="join-mailto-body"
@@ -133,7 +126,6 @@
                            data-t-page="join-apply-btn">
                             Envoyer ma candidature par email
                         </a>
-
                         <div style="margin-top: .9rem; font-size: .85rem; opacity: .8;"
                              data-t-page="join-apply-note">
                             Pensez à joindre votre CV.
@@ -141,7 +133,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 </main>

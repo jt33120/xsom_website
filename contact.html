@@ -10,9 +10,12 @@
           content="Contactez xSOM Consulting pour échanger sur vos enjeux IT, vos projets et vos besoins d'accompagnement.">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="assets/js/navbar.js" defer></script>
     <script src="assets/js/footer.js" defer></script>
     <script src="assets/js/translate.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
 </head>
 <body>
 <header>
@@ -34,7 +37,7 @@
 </header>
 
 <main>
-    <section class="page-hero">
+    <section class="page-hero animate-on-scroll" data-animate="fade-up">
         <div class="wrapper">
             <h1 class="page-title" data-t-page="contact-hero-title">Nous contacter</h1>
             <p class="page-subtitle" data-t-page="contact-hero-subtitle">
@@ -45,31 +48,25 @@
     </section>
 
     <section class="section">
-        <div class="wrapper two-columns">
+        <div class="wrapper two-columns animate-on-scroll" data-animate="fade-up">
             <div>
-                <header class="section-header">
+                <header class="section-header animate-on-scroll" data-animate="fade-up">
                     <div class="section-kicker" data-t-page="contact-kicker">Échanges</div>
                     <h2 class="section-title" data-t-page="contact-title2">Contact</h2>
                 </header>
-
                 <p class="section-description" data-t-page="contact-desc">
                     Nous répondons généralement sous quelques jours ouvrés. Donnez-nous
                     quelques éléments de contexte pour que nous puissions vous orienter
                     vers le bon interlocuteur.
                 </p>
-
-                <div class="highlight-box">
+                <div class="highlight-box animate-on-scroll" data-animate="fade-up">
                     <strong data-t-page="contact-email-label">Email :</strong>
                     <a href="mailto:jean-philippe.talou@xsom.fr">jean-philippe.talou@xsom.fr</a><br>
-
                     <strong data-t-page="contact-phone-label">Téléphone :</strong><br>
-
                     <span data-t-page="contact-phone-fr-label">France :</span>
                     <a href="tel:+33623024031">+33 06 23 02 40 31</a><br>
-
                     <span data-t-page="contact-phone-us-label">États-Unis :</span>
                     <a href="tel:+16174051973">+1 617 405 1973</a><br><br>
-
                     <!-- LinkedIn link: add aria-label + a visible label (optional) -->
                     <a href="https://www.linkedin.com/company/xsom-consulting"
                        target="_blank"
@@ -86,25 +83,21 @@
                     </a>
                 </div>
             </div>
-
             <div>
-                <div class="form-card">
+                <div class="form-card premium-card animate-on-scroll" data-animate="fade-up">
                     <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;"
                        data-t-page="contact-form-desc">
                         Envoyez-nous un email, nous revenons vers vous sous quelques jours ouvrés.
                     </p>
-
                     <!-- Mailto is made dynamic by translate.js (subject/body translated) -->
-                    <a class="btn btn-primary"
+                    <a class="btn btn-primary magnetic-btn"
                        data-mailto-base="mailto:jean-philippe.talou@xsom.fr"
                        href="mailto:jean-philippe.talou@xsom.fr?subject=%5BContact%5D%20Demande%20d%E2%80%99information&body=Bonjour%2C%0A%0AJe%20souhaite%20%C3%A9changer%20%C3%A0%20propos%20de%20%5Bvotre%20sujet%5D.%0A%0ACoordonn%C3%A9es%20%3A%0A-%20Nom%20%2F%20Entreprise%20%3A%0A-%20Email%20%3A%0A%0AMerci%2C"
                        data-t-page="contact-form-btn">
                         Envoyer un email
                     </a>
-
                 </div>
             </div>
-
         </div>
     </section>
 </main>
