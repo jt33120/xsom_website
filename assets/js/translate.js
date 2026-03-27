@@ -280,7 +280,7 @@ const pageTranslations = {
         'expertise-tailored-btn': "Let's discuss your project",
         // Contact page
         'contact-title': "Nous contacter – xSOM Consulting",
-        'contact-header-subtitle': "Conseil en informatique",
+        'contact-header-subtitle': "Conseil IT",
         'contact-hero-title': "Nous contacter",
         'contact-hero-subtitle': "Vous avez un projet, un diagnostic à mener ou une question sur nos expertises ? Échangeons autour de vos enjeux.",
         'contact-kicker': "Échanges",
@@ -300,9 +300,9 @@ const pageTranslations = {
         'contact-mailto-body': "Bonjour,%0A%0AJe souhaite échanger à propos de [votre sujet].%0A%0ACoordonnées :%0A- Nom / Entreprise :%0A- Email :%0A%0AMerci,",
         // ===== JOIN PAGE (FR) =====
 "join-title": "Nous rejoindre – xSOM Consulting",
-"join-meta-desc": "Rejoindre xSOM Consulting : un cabinet de conseil en informatique à taille humaine.",
+"join-meta-desc": "Rejoindre xSOM Consulting : un cabinet de Conseil IT à taille humaine.",
 "join-logo-alt": "Logo xSOM Consulting",
-"join-header-subtitle": "Conseil en informatique",
+"join-header-subtitle": "Conseil IT",
 "join-hero-title": "Nous rejoindre",
 
 "join-opps-kicker": "Opportunités",
@@ -332,7 +332,7 @@ const pageTranslations = {
 "about-page-title": "Qui nous sommes – xSOM Consulting",
 "about-meta-desc": "Découvrez l'histoire, les valeurs et la façon de travailler du cabinet xSOM Consulting.",
 "about-logo-alt": "Logo xSOM Consulting",
-"about-header-subtitle": "Conseil en informatique",
+"about-header-subtitle": "Conseil IT",
 
 "about-title": "Qui nous sommes",
 "about-subtitle": "xSOM Consulting est un cabinet de conseil indépendant dédié aux enjeux de transformation et de performance des systèmes d'information.",

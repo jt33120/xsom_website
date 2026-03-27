@@ -4,6 +4,7 @@ const navbarHTML = `
         <a href="about.html" data-page="about.html" data-t="about">Qui nous sommes</a>
         <a href="vision.html" data-page="vision.html" data-t="vision">Vision</a>
         <a href="expertise.html" data-page="expertise.html" data-t="expertise">Expertises</a>
+        <a href="IA.html" data-page="IA.html" data-t="ia">IA & Data</a>
         <a href="join.html" data-page="join.html" data-t="join">Nous rejoindre</a>
         <a href="contact.html" class="nav-cta" data-page="contact.html" data-t="contact">Nous contacter</a>
         <div class="lang-switcher">
@@ -18,6 +19,7 @@ const translations = {
         about: "Qui nous sommes",
         vision: "Vision",
         expertise: "Expertises",
+        ia: "IA & Data",
         join: "Nous rejoindre",
         contact: "Nous contacter"
     },
@@ -25,6 +27,7 @@ const translations = {
         about: "About us",
         vision: "Vision",
         expertise: "Expertise",
+        ia: "AI & Data",
         join: "Join us",
         contact: "Contact us"
     }

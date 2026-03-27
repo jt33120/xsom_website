@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>xSOM Consulting – Cabinet de conseil en informatique</title>
+    <title>xSOM Consulting – Cabinet de conseil IT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="xSOM Consulting, cabinet de conseil en informatique, stratégie digitale et accompagnement de projets IT.">
+    <meta name="description" content="xSOM Consulting, cabinet de conseil IT, stratégie digitale et accompagnement de projets IT.">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/navbar.js" defer></script>
     <script src="assets/js/footer.js" defer></script>
@@ -16,7 +16,7 @@
             <img src="assets/images/LOGO.png" alt="xSOM Consulting Logo">
             <div>
                 <a href="index.html">xSOM Consulting</a>
-                <span>Conseil en informatique</span>
+                <span>Conseil IT</span>
             </div>
         </div>
         <div id="nav-container"></div>
