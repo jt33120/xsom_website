@@ -2,16 +2,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title data-t-page="contact-title">Nous contacter – xSOM Consulting</title>
+    <title>Contact – xSOM Consulting</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Make meta description translatable -->
-    <meta name="description" data-t-page="contact-meta-desc"
-          content="Contactez xSOM Consulting pour échanger sur vos enjeux IT, vos projets et vos besoins d'accompagnement.">
-
+    <meta name="description" content="Contactez xSOM Consulting pour discuter de vos projets IT, cybersécurité ou IA.">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="assets/images/LOGO.png">
     <script src="assets/js/navbar.js" defer></script>
     <script src="assets/js/footer.js" defer></script>
     <script src="assets/js/translate.js" defer></script>
@@ -21,15 +16,10 @@
 <header>
     <div class="wrapper navbar">
         <div class="logo">
-            <!-- Make alt translatable -->
-            <img src="assets/images/LOGO.png"
-                 alt="xSOM Consulting Logo"
-                 data-t-page="contact-logo-alt"
-                 data-t-attr="alt">
-
+            <img src="assets/images/LOGO.png" alt="xSOM Consulting Logo">
             <div>
                 <a href="index.html">xSOM Consulting</a>
-                <span data-t-page="contact-header-subtitle">Conseil IT</span>
+                <span>Conseil en informatique</span>
             </div>
         </div>
         <div id="nav-container"></div>
@@ -37,65 +27,66 @@
 </header>
 
 <main>
-    <section class="page-hero animate-on-scroll" data-animate="fade-up">
+    <section class="page-hero">
         <div class="wrapper">
-            <h1 class="page-title" data-t-page="contact-hero-title">Nous contacter</h1>
-            <p class="page-subtitle" data-t-page="contact-hero-subtitle">
-                Vous avez un projet, un diagnostic à mener ou une question sur nos
-                expertises ? Échangeons autour de vos enjeux.
+            <h1 class="page-title">Nous contacter</h1>
+            <p class="page-subtitle">
+                Un projet, une question ou un besoin d'accompagnement ? Échangeons.
             </p>
         </div>
     </section>
 
     <section class="section">
-        <div class="wrapper two-columns animate-on-scroll" data-animate="fade-up">
+        <div class="wrapper two-columns" style="max-width: 900px;">
             <div>
-                <header class="section-header animate-on-scroll" data-animate="fade-up">
-                    <div class="section-kicker" data-t-page="contact-kicker">Échanges</div>
-                    <h2 class="section-title" data-t-page="contact-title2">Contact</h2>
+                <header class="section-header">
+                    <div class="section-kicker">Contact</div>
+                    <h2 class="section-title">Parlons de votre projet</h2>
                 </header>
-                <p class="section-description" data-t-page="contact-desc">
-                    Nous répondons généralement sous quelques jours ouvrés. Donnez-nous
-                    quelques éléments de contexte pour que nous puissions vous orienter
-                    vers le bon interlocuteur.
+                <p class="section-description">
+                    Nous sommes disponibles pour discuter de vos enjeux de transformation IT,
+                    cybersécurité ou intelligence artificielle. Prenez contact directement
+                    par email.
                 </p>
-                <div class="highlight-box animate-on-scroll" data-animate="fade-up">
-                    <strong data-t-page="contact-email-label">Email :</strong>
-                    <a href="mailto:jean-philippe.talou@xsom.fr">jean-philippe.talou@xsom.fr</a><br>
-                    <strong data-t-page="contact-phone-label">Téléphone :</strong><br>
-                    <span data-t-page="contact-phone-fr-label">France :</span>
-                    <a href="tel:+33623024031">+33 06 23 02 40 31</a><br>
-                    <span data-t-page="contact-phone-us-label">États-Unis :</span>
-                    <a href="tel:+16174051973">+1 617 405 1973</a><br><br>
-                    <!-- LinkedIn link: add aria-label + a visible label (optional) -->
-                    <a href="https://www.linkedin.com/company/xsom-consulting"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="linkedin-link"
-                       aria-label="Suivez-nous sur LinkedIn"
-                       data-t-page="contact-linkedin-label"
-                       data-t-attr="aria-label"
-                    >
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.4rem;">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                <div style="margin-top: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary); flex-shrink: 0;">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
                         </svg>
-                        <span style="vertical-align: middle;" data-t-page="contact-linkedin-text">LinkedIn</span>
-                    </a>
+                        <a href="mailto:jean-philippe.talou@xsom.fr" style="color: var(--primary); font-weight: 600;">jean-philippe.talou@xsom.fr</a>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary); flex-shrink: 0;">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span style="color: var(--text-secondary);">Paris, France &bull; États-Unis</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color: var(--primary); flex-shrink: 0;">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.27-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <a href="https://www.linkedin.com/company/xsom-consulting" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 600;">LinkedIn</a>
+                    </div>
                 </div>
             </div>
             <div>
-                <div class="form-card premium-card animate-on-scroll" data-animate="fade-up">
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;"
-                       data-t-page="contact-form-desc">
-                        Envoyez-nous un email, nous revenons vers vous sous quelques jours ouvrés.
-                    </p>
-                    <!-- Mailto is made dynamic by translate.js (subject/body translated) -->
-                    <a class="btn btn-primary magnetic-btn"
-                       data-mailto-base="mailto:jean-philippe.talou@xsom.fr"
-                       href="mailto:jean-philippe.talou@xsom.fr?subject=%5BContact%5D%20Demande%20d%E2%80%99information&body=Bonjour%2C%0A%0AJe%20souhaite%20%C3%A9changer%20%C3%A0%20propos%20de%20%5Bvotre%20sujet%5D.%0A%0ACoordonn%C3%A9es%20%3A%0A-%20Nom%20%2F%20Entreprise%20%3A%0A-%20Email%20%3A%0A%0AMerci%2C"
-                       data-t-page="contact-form-btn">
-                        Envoyer un email
-                    </a>
+                <div class="highlight-box" style="padding: 2rem;">
+                    <h3 style="font-size: 1.05rem; margin-bottom: 1rem; color: var(--gray-900);">Nos domaines d'intervention</h3>
+                    <ul class="list-check">
+                        <li>Stratégie SI & gouvernance</li>
+                        <li>Cybersécurité & conformité</li>
+                        <li>Infrastructures IA & Cloud</li>
+                        <li>Data Science & automatisation</li>
+                        <li>Télécom & réseau</li>
+                        <li>Accompagnement au changement</li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="mailto:jean-philippe.talou@xsom.fr?subject=Prise%20de%20contact%20%E2%80%93%20xSOM%20Consulting" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            Envoyer un email
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
