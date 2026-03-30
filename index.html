@@ -15,6 +15,260 @@
     <script src="assets/js/footer.js" defer></script>
     <script src="assets/js/translate.js" defer></script>
     <script src="assets/js/animations.js" defer></script>
+    
+    <!-- Interactive Logo Styles -->
+    <style>
+        /* ========== INTERACTIVE LOGO SECTION ========== */
+        .interactive-logo-section {
+            padding: 5rem 0;
+            background: linear-gradient(180deg, var(--bg-dark, #0a1628) 0%, var(--bg-darker, #050d18) 100%);
+        }
+        
+        .logo-experience {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .logo-container {
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        .logo-wrapper {
+            position: relative;
+            width: 340px;
+            height: 340px;
+        }
+        
+        .interactive-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: filter 0.3s ease;
+        }
+        
+        .logo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .arrow-zone {
+            fill: transparent;
+            cursor: pointer;
+            pointer-events: all;
+            transition: fill 0.3s ease;
+        }
+        
+        .arrow-zone:hover {
+            fill: rgba(59, 139, 212, 0.15);
+        }
+        
+        .arrow-zone.active {
+            fill: rgba(59, 139, 212, 0.25);
+        }
+        
+        /* Highlight effect on logo when hovering zones */
+        .logo-wrapper.highlight-ai .interactive-logo {
+            filter: drop-shadow(0 0 20px rgba(59, 139, 212, 0.5));
+        }
+        
+        .logo-wrapper.highlight-data .interactive-logo {
+            filter: drop-shadow(0 0 20px rgba(59, 139, 212, 0.5));
+        }
+        
+        .logo-wrapper.highlight-cyber .interactive-logo {
+            filter: drop-shadow(0 0 15px rgba(100, 100, 100, 0.5));
+        }
+        
+        /* Info panels container */
+        .verticals-info {
+            flex: 1;
+            max-width: 480px;
+        }
+        
+        .vertical-panel {
+            position: relative;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            display: none;
+        }
+        
+        .vertical-panel.active {
+            opacity: 1;
+            transform: translateX(0);
+            display: block;
+        }
+        
+        .vertical-panel::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-right: 12px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .panel-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .panel-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .panel-icon svg {
+            width: 26px;
+            height: 26px;
+            stroke: white;
+            stroke-width: 1.8;
+            fill: none;
+        }
+        
+        .panel-icon.cyber { background: linear-gradient(135deg, #4a4a4a 0%, #2a2a2a 100%); }
+        .panel-icon.ai { background: linear-gradient(135deg, #1e5aa8 0%, #0a2d5c 100%); }
+        .panel-icon.data { background: linear-gradient(135deg, #3b8bd4 0%, #1a5a9e 100%); }
+        
+        .panel-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #fff;
+            margin: 0;
+            line-height: 1.3;
+        }
+        
+        .panel-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .panel-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .panel-tag {
+            font-size: 0.8rem;
+            padding: 0.4rem 0.9rem;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+        }
+        
+        .panel-tag:hover {
+            background: rgba(200, 164, 86, 0.15);
+            border-color: rgba(200, 164, 86, 0.3);
+            color: var(--accent-light, #c8a456);
+        }
+        
+        /* Default state hint */
+        .logo-hint {
+            text-align: center;
+            padding: 2rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.95rem;
+        }
+        
+        .logo-hint.hidden {
+            display: none;
+        }
+        
+        .logo-hint svg {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 0.75rem;
+            opacity: 0.5;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+        
+        /* Arrow indicator dots */
+        .arrow-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .arrow-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .arrow-indicator:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.2);
+        }
+        
+        .arrow-indicator.active {
+            background: var(--accent-light, #c8a456);
+            box-shadow: 0 0 10px rgba(200, 164, 86, 0.5);
+        }
+        
+        .arrow-indicator.cyber { border: 2px solid #5a5a5a; }
+        .arrow-indicator.ai { border: 2px solid #1e5aa8; }
+        .arrow-indicator.data { border: 2px solid #3b8bd4; }
+        
+        /* Responsive */
+        @media (max-width: 900px) {
+            .logo-experience {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .logo-wrapper {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .verticals-info {
+                max-width: 100%;
+                padding: 0 1rem;
+            }
+            
+            .vertical-panel::before {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -71,6 +325,145 @@
                     <span class="tag">Industrie</span>
                 </div>
             </aside>
+        </div>
+    </section>
+
+    <!-- ========== INTERACTIVE LOGO SECTION ========== -->
+    <section class="interactive-logo-section section">
+        <div class="wrapper">
+            <header class="section-header" style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">
+                <div class="section-kicker" style="background: rgba(200,164,86,0.15); border-color: rgba(200,164,86,0.3); color: var(--accent-light, #c8a456);">Notre ADN</div>
+                <h2 class="section-title" style="color: #fff;">Trois expertises, une vision intégrée</h2>
+                <p style="color: rgba(255,255,255,0.65); margin: 0 auto;">
+                    Chaque flèche de notre logo représente un pôle d'expertise. Ensemble, elles forment un cycle vertueux de transformation digitale.
+                </p>
+            </header>
+            
+            <div class="logo-experience">
+                <!-- Interactive Logo with PNG -->
+                <div class="logo-container">
+                    <div class="logo-wrapper">
+                        <img src="assets/images/LOGO.png" alt="xSOM Logo - Trois flèches" class="interactive-logo">
+                        
+                        <!-- Clickable overlay areas for each arrow -->
+                        <svg class="logo-overlay" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+                            <!-- Arrow AI: Blue pointing up-right (top area) -->
+                            <polygon 
+                                class="arrow-zone" 
+                                id="arrow-ai"
+                                points="55,5 75,5 95,45 75,45 75,55 55,55 55,45 35,45 35,35 55,35"
+                                onclick="showVertical('ai')" 
+                                onmouseenter="hoverArrow('ai')" 
+                                onmouseleave="unhoverArrow()"
+                            />
+                            
+                            <!-- Arrow Data: Blue pointing right (right area) -->
+                            <polygon 
+                                class="arrow-zone" 
+                                id="arrow-data"
+                                points="55,55 55,65 85,65 85,58 100,72 85,86 85,78 55,78 55,95 45,95 45,55"
+                                onclick="showVertical('data')" 
+                                onmouseenter="hoverArrow('data')" 
+                                onmouseleave="unhoverArrow()"
+                            />
+                            
+                            <!-- Arrow Cyber: Gray pointing down-left (left area) -->
+                            <polygon 
+                                class="arrow-zone" 
+                                id="arrow-cyber"
+                                points="45,45 45,65 25,65 25,80 15,80 0,100 0,90 15,72 15,65 5,65 5,55 25,55 25,35 15,35 15,42 5,35 15,25 15,35 35,35 35,45"
+                                onclick="showVertical('cyber')" 
+                                onmouseenter="hoverArrow('cyber')" 
+                                onmouseleave="unhoverArrow()"
+                            />
+                        </svg>
+                    </div>
+                    
+                    <!-- Arrow indicators -->
+                    <div class="arrow-indicators">
+                        <div class="arrow-indicator cyber" onclick="showVertical('cyber')" title="Télécom & Cybersécurité"></div>
+                        <div class="arrow-indicator ai" onclick="showVertical('ai')" title="Infrastructures IA"></div>
+                        <div class="arrow-indicator data" onclick="showVertical('data')" title="Data Science & ML"></div>
+                    </div>
+                </div>
+                
+                <!-- Info panels -->
+                <div class="verticals-info">
+                    <!-- Default hint -->
+                    <div class="logo-hint" id="logo-hint">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+                        </svg>
+                        <p>Cliquez ou survolez une flèche<br>pour découvrir nos expertises</p>
+                    </div>
+                    
+                    <!-- Cyber Panel -->
+                    <div class="vertical-panel" id="panel-cyber">
+                        <div class="panel-header">
+                            <div class="panel-icon cyber">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 2l8 4v6c0 5-3 9-8 10-5-1-8-5-8-10V6l8-4z"/>
+                                </svg>
+                            </div>
+                            <h3 class="panel-title">Télécom, Réseau & Cybersécurité</h3>
+                        </div>
+                        <p class="panel-description">
+                            Gouvernance des infrastructures réseau, programmes de conformité cyber (LPM, DORA, NIS) et résilience opérationnelle. Nous sécurisons vos systèmes de bout en bout.
+                        </p>
+                        <div class="panel-tags">
+                            <span class="panel-tag">Architecture réseau & SI</span>
+                            <span class="panel-tag">Programmes cyber réglementaires</span>
+                            <span class="panel-tag">PCA/PRA & continuité</span>
+                            <span class="panel-tag">Audit et conformité</span>
+                        </div>
+                    </div>
+                    
+                    <!-- AI Panel -->
+                    <div class="vertical-panel" id="panel-ai">
+                        <div class="panel-header">
+                            <div class="panel-icon ai">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                    <path d="M8 21h8"/><path d="M12 17v4"/>
+                                    <path d="M7 8h2m2 0h2m2 0h2"/>
+                                </svg>
+                            </div>
+                            <h3 class="panel-title">Infrastructures IA & Cloud Souverain</h3>
+                        </div>
+                        <p class="panel-description">
+                            Déploiement d'architectures cloud souveraines, data centers optimisés pour l'IA et observabilité full-stack. De la conception à la mise en production.
+                        </p>
+                        <div class="panel-tags">
+                            <span class="panel-tag">Cloud souverain & Green IT</span>
+                            <span class="panel-tag">Architectures GPU / entraînement</span>
+                            <span class="panel-tag">Monitoring, FinOps & AIOps</span>
+                            <span class="panel-tag">Conformité AI Act & DORA</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Data Panel -->
+                    <div class="vertical-panel" id="panel-data">
+                        <div class="panel-header">
+                            <div class="panel-icon data">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                                </svg>
+                            </div>
+                            <h3 class="panel-title">Data Science, ML & Automatisation</h3>
+                        </div>
+                        <p class="panel-description">
+                            Modélisation, pipelines de données, MLOps et déploiement de solutions IA industrialisées en production. Nous transformons vos données en avantage compétitif.
+                        </p>
+                        <div class="panel-tags">
+                            <span class="panel-tag">Feature engineering & modélisation</span>
+                            <span class="panel-tag">Pipelines, APIs & scoring</span>
+                            <span class="panel-tag">MLOps, CI/CD & monitoring</span>
+                            <span class="panel-tag">Gouvernance des modèles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -308,5 +701,103 @@
 </main>
 
 <footer></footer>
+
+<!-- Interactive Logo Script -->
+<script>
+(function() {
+    let activeVertical = null;
+    
+    // Get elements
+    const logoWrapper = document.querySelector('.logo-wrapper');
+    const zones = {
+        cyber: document.getElementById('arrow-cyber'),
+        ai: document.getElementById('arrow-ai'),
+        data: document.getElementById('arrow-data')
+    };
+    
+    // Get all panels
+    const panels = {
+        cyber: document.getElementById('panel-cyber'),
+        ai: document.getElementById('panel-ai'),
+        data: document.getElementById('panel-data')
+    };
+    
+    // Get indicators
+    const indicators = document.querySelectorAll('.arrow-indicator');
+    
+    // Get hint
+    const hint = document.getElementById('logo-hint');
+    
+    // Show a specific vertical
+    window.showVertical = function(vertical) {
+        // Update active state
+        activeVertical = vertical;
+        
+        // Hide hint
+        hint.classList.add('hidden');
+        
+        // Update logo highlight
+        logoWrapper.className = 'logo-wrapper highlight-' + vertical;
+        
+        // Update zones
+        Object.keys(zones).forEach(key => {
+            if (key === vertical) {
+                zones[key].classList.add('active');
+            } else {
+                zones[key].classList.remove('active');
+            }
+        });
+        
+        // Update panels
+        Object.keys(panels).forEach(key => {
+            if (key === vertical) {
+                panels[key].classList.add('active');
+            } else {
+                panels[key].classList.remove('active');
+            }
+        });
+        
+        // Update indicators
+        indicators.forEach(ind => {
+            if (ind.classList.contains(vertical)) {
+                ind.classList.add('active');
+            } else {
+                ind.classList.remove('active');
+            }
+        });
+    };
+    
+    // Hover effects
+    window.hoverArrow = function(vertical) {
+        if (activeVertical) return;
+        logoWrapper.className = 'logo-wrapper highlight-' + vertical;
+    };
+    
+    window.unhoverArrow = function() {
+        if (activeVertical) return;
+        logoWrapper.className = 'logo-wrapper';
+    };
+    
+    // Click outside to reset
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.logo-container') && !e.target.closest('.verticals-info')) {
+            activeVertical = null;
+            hint.classList.remove('hidden');
+            logoWrapper.className = 'logo-wrapper';
+            
+            Object.keys(zones).forEach(key => {
+                zones[key].classList.remove('active');
+            });
+            
+            Object.keys(panels).forEach(key => {
+                panels[key].classList.remove('active');
+            });
+            
+            indicators.forEach(ind => ind.classList.remove('active'));
+        }
+    });
+})();
+</script>
+
 </body>
 </html>
