@@ -12,9 +12,9 @@
   --primary: #0f2b46;
   --primary-light: #1a4975;
   --primary-dark: #091c30;
-  --accent: #c8a456;
-  --accent-light: #dfc07a;
-  --accent-dark: #a88a3a;
+  --accent: #9ca3af;
+  --accent-light: #9ca3af;
+  --accent-dark: rgb(142, 117, 49);
 
   /* Neutrals */
   --white: #ffffff;
