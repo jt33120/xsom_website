@@ -1,312 +1,472 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>xSOM Consulting | Conseil IT, Cybersécurité, IA & Data</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="xSOM Consulting — cabinet de conseil en informatique. Stratégie SI, cybersécurité, infrastructures IA et Data Science. Gouvernance, architecture et mise en production.">
-    <meta name="keywords" content="conseil IT, cybersécurité, Data Science, IA, gouvernance SI, transformation digitale, télécom">
-    <meta property="og:title" content="xSOM Consulting | Conseil IT, Cybersécurité, IA & Data">
-    <meta property="og:description" content="Cabinet de conseil en informatique. Stratégie, cybersécurité, infrastructures IA, Data Science.">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/png" href="assets/images/LOGO.png">
-    <script src="assets/js/navbar.js" defer></script>
-    <script src="assets/js/footer.js" defer></script>
-    <script src="assets/js/translate.js" defer></script>
-    <script src="assets/js/animations.js" defer></script>
+<meta charset="UTF-8">
+<title>xSOM Consulting | Conseil IT, Cybersécurité, IA & Data</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="xSOM Consulting — cabinet de conseil en informatique. Stratégie SI, cybersécurité, infrastructures IA, Data Science.">
+<link rel="icon" type="image/png" href="assets/images/LOGO_NOBG.PNG">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--navy:#0a1628;--navy-mid:#0f2038;--navy-light:#162d4a;
+--blue:#2563eb;--blue-bright:#3b82f6;--blue-glow:rgba(37,99,235,.25);
+--grey-arrow:#7b8a9e;--grey-light:#97a5b7;
+--accent:#c8a456;--accent-glow:rgba(200,164,86,.15);
+--white:#fff;--text-dim:rgba(255,255,255,.48);--text-mid:rgba(255,255,255,.72);
+--surface:rgba(255,255,255,.035);--surface-h:rgba(255,255,255,.065);
+--border-s:rgba(255,255,255,.06);--border-m:rgba(255,255,255,.11);
+--rl:12px;--rxl:16px;--hh:68px;
+--ease:cubic-bezier(.25,.46,.45,.94);--eo:cubic-bezier(.16,1,.3,1)
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:15px;line-height:1.6}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}ul{list-style:none}
+.w{max-width:1200px;margin:0 auto;padding:0 2rem}
+
+/* ---- HEADER ---- */
+
+/* ---- HERO ---- */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:var(--hh);overflow:hidden;background:url('assets/images/MAIN.jpg') center/cover no-repeat}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(165deg,rgba(10,22,40,.92) 0%,rgba(10,22,40,.82) 40%,rgba(10,22,40,.88) 100%);z-index:0}
+
+/* Background effects (on top of overlay) */
+.hbg{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+.hbg .ob{position:absolute;border-radius:50%;filter:blur(120px);animation:obf 22s ease-in-out infinite}
+.ob1{width:500px;height:500px;top:-10%;right:-6%;background:radial-gradient(circle,var(--blue-glow),transparent 70%)}
+.ob2{width:400px;height:400px;bottom:-15%;left:-4%;background:radial-gradient(circle,rgba(100,120,140,.1),transparent 70%);animation-delay:-8s}
+.ob3{width:250px;height:250px;top:38%;left:42%;background:radial-gradient(circle,var(--accent-glow),transparent 70%);animation-delay:-14s}
+.hbg::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--border-s) 1px,transparent 1px),linear-gradient(90deg,var(--border-s) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse 60% 50% at 50% 50%,black 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 60% 50% at 50% 50%,black 20%,transparent 70%);opacity:.2}
+@keyframes obf{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(20px,-15px) scale(1.03)}66%{transform:translate(-15px,10px) scale(.97)}}
+
+.hc{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;padding:2rem 0 4rem}
+.ht{max-width:520px}
+
+/* Kicker */
+.hk{display:inline-flex;align-items:center;gap:.4rem;padding:.28rem .75rem;font-size:.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);border:1px solid rgba(200,164,86,.18);border-radius:999px;background:rgba(200,164,86,.04);margin-bottom:1.4rem;opacity:0;animation:fu .7s var(--eo) .2s forwards}
+.hk .dt{width:5px;height:5px;border-radius:50%;background:var(--accent);animation:pu 2.5s ease-in-out infinite}
+@keyframes pu{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* Title */
+h1.htt{font-size:clamp(2.1rem,4vw,3rem);line-height:1.08;font-weight:800;letter-spacing:-.03em;margin-bottom:1.3rem;opacity:0;animation:fu .7s var(--eo) .35s forwards}
+.htt .em{color:var(--blue-bright)}
+
+.hd{font-size:.95rem;line-height:1.7;color:var(--text-mid);max-width:440px;margin-bottom:1.8rem;opacity:0;animation:fu .7s var(--eo) .48s forwards}
+.ha{display:flex;gap:.65rem;flex-wrap:wrap;opacity:0;animation:fu .7s var(--eo) .6s forwards}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.65rem 1.4rem;font-family:inherit;font-size:.82rem;font-weight:600;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:all .3s var(--ease);white-space:nowrap}
+.bp{background:var(--blue);color:var(--white);border-color:var(--blue);box-shadow:0 0 18px var(--blue-glow)}
+.bp:hover{background:var(--blue-bright);border-color:var(--blue-bright);transform:translateY(-1px);box-shadow:0 4px 24px var(--blue-glow)}
+.bo{background:transparent;color:var(--white);border-color:var(--border-m)}
+.bo:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.03)}
+
+@keyframes fu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+/* ---- HERO LOGO AREA ---- */
+.hla{position:relative;display:flex;align-items:center;justify-content:center;opacity:0;animation:fu .9s var(--eo) .4s forwards}
+.li{position:relative;width:480px;height:460px}
+
+/* The actual logo image */
+.logo-img-wrap{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:220px;height:220px;opacity:0;animation:logoIn 1s var(--eo) .6s forwards}
+.logo-hero-img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 0 50px rgba(37,99,235,.15)) drop-shadow(0 0 100px rgba(37,99,235,.06))}
+@keyframes logoIn{from{opacity:0;transform:translate(-50%,-50%) scale(.85)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+
+/* Subtle glow ring */
+.lg{position:absolute;width:300px;height:300px;border-radius:50%;border:1px solid rgba(37,99,235,.05);top:50%;left:50%;transform:translate(-50%,-50%);animation:gp 5s ease-in-out infinite}
+.lg::before{content:'';position:absolute;inset:-20px;border-radius:50%;border:1px solid rgba(37,99,235,.025)}
+@keyframes gp{0%,100%{opacity:.4;transform:translate(-50%,-50%) scale(1)}50%{opacity:.7;transform:translate(-50%,-50%) scale(1.02)}}
+
+/* Connector lines SVG */
+.clines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0;animation:fi .5s ease 1.8s forwards}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+
+/* Floating labels */
+.ll{position:absolute;padding:.5rem .9rem;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07);border-radius:var(--rl);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);font-size:.76rem;font-weight:600;color:var(--white);white-space:nowrap;cursor:default;transition:all .3s var(--ease);opacity:0;animation:la .5s var(--eo) forwards}
+.ll:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);transform:translateY(-2px)}
+.ll .ld{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:.4rem;vertical-align:middle}
+.ll .ls{display:block;font-size:.64rem;font-weight:400;color:var(--text-dim);margin-top:.15rem}
+
+.label-tl{bottom:5%;left:0;animation-delay:2s}
+.label-tl .ld{background:var(--grey-light)}
+.label-tr{top:5%;right:2%;animation-delay:2.15s}
+.label-tr .ld{background:var(--blue-bright)}
+.label-br{bottom:20%;right:-2%;animation-delay:2.3s}
+.label-br .ld{background:var(--blue)}
+
+@keyframes la{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ---- TICKER ---- */
+
+/* ---- TICKER ---- */
+.tk{
+  padding:1.15rem 0;
+  border-top:1px solid var(--border-s);
+  border-bottom:1px solid var(--border-s);
+  overflow:hidden;
+  background:var(--white);
+  mask-image:linear-gradient(90deg,transparent,black 8%,black 92%,transparent);
+  -webkit-mask-image:linear-gradient(90deg,transparent,black 8%,black 92%,transparent);
+}
+.tkt{display:flex;gap:2.5rem;animation:ts 28s linear infinite;width:max-content}
+.tki{font-size:.76rem;font-weight:500;color:var(--navy);white-space:nowrap}
+.sep{display:inline-block;width:3px;height:3px;border-radius:50%;background:rgba(10,22,40,.12);vertical-align:middle}
+@keyframes ts{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ---- PARTNERS ---- */
+
+/* ---- PARTNERS ---- */
+.pt{
+  padding:3.5rem 0;
+  border-bottom:1px solid var(--border-s);
+  background:var(--white);
+}
+.pt-title{
+  text-align:center;
+  font-size:.7rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:var(--navy);
+  margin-bottom:1.5rem;
+}
+.pt-scroll{
+  overflow:hidden;
+  position:relative;
+  mask-image:linear-gradient(90deg,transparent 0%,black 8%,black 92%,transparent 100%);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,black 8%,black 92%,transparent 100%);
+}
+.pt-track{
+  display:flex;
+  gap:4rem;
+  align-items:center;
+  animation:ptScroll 22s linear infinite;
+  width:max-content;
+}
+.pt-scroll:hover .pt-track{animation-play-state:paused}
+.pt-track img{
+  height:38px;
+  width:auto;
+  object-fit:contain;
+  filter:none;
+  opacity:.7;
+  transition:all .4s var(--ease);
+  cursor:pointer;
+  flex-shrink:0;
+}
+.pt-track img:hover{
+  opacity:1;
+  filter:none;
+  transform:scale(1.1);
+}
+@keyframes ptScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ---- SECTION UTILITIES ---- */
+.sh{text-align:center;margin-bottom:3.5rem}
+.sk{display:inline-flex;padding:.28rem .75rem;font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);border:1px solid rgba(200,164,86,.16);border-radius:999px;background:rgba(200,164,86,.04);margin-bottom:1rem}
+.st{font-size:clamp(1.5rem,2.6vw,2.2rem);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin-bottom:.55rem}
+.sd{font-size:.9rem;color:var(--text-mid);max-width:500px;margin:0 auto;line-height:1.6}
+
+/* ---- PILLARS ---- */
+.ps{padding:6rem 0}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.pl{position:relative;background:var(--surface);border:1px solid var(--border-s);border-radius:var(--rxl);padding:2rem 1.6rem 1.6rem;transition:all .4s var(--ease);overflow:hidden;opacity:0;transform:translateY(32px)}
+.pl.visible{opacity:1;transform:translateY(0)}
+.pl:hover{border-color:var(--border-m);background:var(--surface-h);transform:translateY(-3px);box-shadow:0 14px 44px rgba(0,0,0,.22)}
+.pl::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;opacity:.45;transition:opacity .3s}
+.pl:hover::before{opacity:1}
+.p1::before{background:linear-gradient(90deg,var(--grey-arrow),var(--grey-light))}
+.p2::before{background:linear-gradient(90deg,var(--blue),var(--blue-bright))}
+.p3::before{background:linear-gradient(90deg,var(--blue-bright),var(--accent))}
+.pi{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1.15rem}
+.p1 .pi{background:rgba(107,122,141,.08);color:var(--grey-light)}
+.p2 .pi{background:rgba(37,99,235,.08);color:var(--blue-bright)}
+.p3 .pi{background:rgba(200,164,86,.08);color:var(--accent)}
+.pn{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);margin-bottom:.55rem}
+.pl h3{font-size:1.1rem;font-weight:700;letter-spacing:-.01em;margin-bottom:.55rem;line-height:1.25}
+.pl p{font-size:.84rem;color:var(--text-mid);line-height:1.6;margin-bottom:1.15rem}
+.ptgs{display:flex;flex-wrap:wrap;gap:.3rem}
+.ptg{padding:.22rem .55rem;font-size:.65rem;font-weight:600;border-radius:999px;border:1px solid var(--border-s);color:var(--text-dim);transition:all .2s}
+.pl:hover .ptg{border-color:var(--border-m);color:var(--text-mid)}
+
+/* ---- METRICS ---- */
+.mb{padding:3rem 0;background:linear-gradient(135deg,var(--navy-light),var(--navy))}
+.mr{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
+.mv{font-size:1.8rem;font-weight:800;letter-spacing:-.02em;line-height:1;margin-bottom:.3rem;background:linear-gradient(135deg,var(--white),var(--blue-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ml{font-size:.72rem;color:var(--text-dim);font-weight:500}
+
+/* ---- APPROACH ---- */
+.as{padding:6rem 0;background:var(--white);border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s)}
+.ag2{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.al{display:flex;flex-direction:column;gap:1.4rem;margin-top:1.6rem}
+.ai{display:flex;gap:.8rem;align-items:flex-start;opacity:0;transform:translateX(-14px);transition:all .5s var(--eo)}
+.ai.visible{opacity:1;transform:translateX(0)}
+.ac{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:rgba(37,99,235,.07);border:1px solid rgba(37,99,235,.15);display:flex;align-items:center;justify-content:center;color:var(--blue-bright);margin-top:2px}
+.ai strong{display:block;font-weight:700;margin-bottom:.1rem;font-size:.88rem}
+.ai>div>span{font-size:.82rem;color:var(--text-mid);line-height:1.5}
+
+.ss{display:flex;flex-direction:column;gap:1.15rem}
+.sc{padding:1.6rem;background:var(--surface);border:1px solid var(--border-s);border-radius:var(--rxl);transition:all .3s}
+.sc:hover{border-color:var(--border-m);transform:translateY(-1px)}
+.sv{font-size:2.2rem;font-weight:800;letter-spacing:-.02em;line-height:1;margin-bottom:.35rem}
+.slb{font-size:.78rem;color:var(--text-dim);line-height:1.4}
+.stc h4{font-size:.95rem;font-weight:700;margin-bottom:.8rem}
+.stgs{display:flex;flex-wrap:wrap;gap:.35rem}
+.stg{padding:.32rem .7rem;font-size:.72rem;font-weight:600;border-radius:999px;border:1px solid var(--border-s);color:var(--text-mid);transition:all .2s}
+.stg:hover{border-color:var(--blue);color:var(--blue-bright);background:rgba(37,99,235,.04)}
+
+/* ---- CTA ---- */
+.cs{padding:6rem 0;text-align:center;position:relative}
+.cs .ob{position:absolute;border-radius:50%;filter:blur(100px)}
+.cs .ob1{width:320px;height:320px;background:var(--blue-glow);top:-70px;right:12%}
+.cs .ob2{width:220px;height:220px;background:var(--accent-glow);bottom:-50px;left:18%}
+.cc{position:relative;z-index:1}
+.ctt{font-size:clamp(1.7rem,2.8vw,2.4rem);font-weight:800;letter-spacing:-.02em;line-height:1.12;margin-bottom:.9rem}
+.cds{font-size:.92rem;color:var(--text-mid);max-width:440px;margin:0 auto 1.6rem;line-height:1.6}
+.cas{display:flex;gap:.65rem;justify-content:center;flex-wrap:wrap}
+
+/* ---- FOOTER ---- */
+footer{padding:2.5rem 0 1.5rem;border-top:1px solid var(--border-s)}
+.fg{display:flex;justify-content:space-between;align-items:start;gap:2rem;flex-wrap:wrap}
+.fb p{font-size:.76rem;color:var(--text-dim);max-width:250px;margin-top:.55rem;line-height:1.5}
+.fl{display:flex;gap:2.5rem}
+.fl h5{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);margin-bottom:.55rem}
+.fl ul{display:flex;flex-direction:column;gap:.28rem}
+.fl a{font-size:.8rem;color:var(--text-mid);transition:color .2s}
+.fl a:hover{color:var(--white)}
+.fbot{margin-top:2rem;padding-top:1.15rem;border-top:1px solid var(--border-s);display:flex;justify-content:space-between;font-size:.7rem;color:var(--text-dim)}
+
+/* ---- REVEAL ---- */
+.rv{opacity:0;transform:translateY(24px);transition:all .7s var(--eo)}
+.rv.visible{opacity:1;transform:translateY(0)}
+
+/* ---- RESPONSIVE ---- */
+@media(max-width:1024px){
+.hc{grid-template-columns:1fr;gap:2rem;text-align:center}
+.ht{max-width:100%;margin:0 auto}.hd{margin:0 auto 1.8rem}.ha{justify-content:center}
+.hla{order:-1}.li{width:340px;height:340px}.logo-img-wrap{width:170px;height:170px}.lg{width:230px;height:230px}
+.label-tl{left:2%}.label-br{right:0}
+.pg{grid-template-columns:1fr;max-width:460px;margin:0 auto}
+.ag2{grid-template-columns:1fr;gap:2.5rem}
+.mr{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+.w{padding:0 1.15rem}
+.mt{display:block}
+nav{display:none}
+nav.open{display:flex;flex-direction:column;position:absolute;top:var(--hh);left:0;width:100%;background:var(--navy);border-bottom:1px solid var(--border-s);padding:.75rem 0}
+nav.open a{padding:.65rem 1.75rem}
+.li{width:280px;height:280px}.logo-img-wrap{width:140px;height:140px}
+.ll{font-size:.68rem;padding:.4rem .7rem}
+.label-tl{left:0;bottom:2%}.label-tr{right:0;top:2%}.label-br{right:0;bottom:12%}
+.mr{grid-template-columns:1fr 1fr}
+.fg{flex-direction:column}.fl{flex-direction:column;gap:1rem}
+.fbot{flex-direction:column;gap:.4rem;text-align:center}
+}
+</style>
 </head>
 <body>
-<header>
-    <div class="wrapper navbar">
-        <div class="logo">
-            <img src="assets/images/LOGO.png" alt="xSOM Consulting Logo">
-            <div>
-                <a href="index.html">xSOM Consulting</a>
-                <span>Conseil en informatique</span>
-            </div>
-        </div>
-        <div id="nav-container"></div>
+
+<script src="assets/js/header.js" defer></script>
+
+<!-- ===== HERO ===== -->
+<section class="hero" style="padding-top:68px;">
+<div class="hbg"><div class="ob ob1"></div><div class="ob ob2"></div><div class="ob ob3"></div></div>
+<div class="w hc">
+  <div class="ht">
+    <div class="hk"><span class="dt"></span>Cabinet de conseil — depuis 2007</div>
+    <h1 class="htt">Gouvernance, Cybersécurité<br>et <span class="em">Intelligence Artificielle</span></h1>
+    <p class="hd">Nous accompagnons les DSI et directions métiers dans la conception, la sécurisation et la transformation de leurs systèmes d'information — de la stratégie à la mise en production.</p>
+    <div class="ha">
+      <a href="expertise.html" class="btn bp">Découvrir nos expertises <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="contact.html" class="btn bo">Nous contacter</a>
     </div>
-</header>
+  </div>
 
-<main>
-    <!-- ========== HERO ========== -->
-    <section class="hero">
-        <div class="wrapper hero-inner">
-            <div>
-                <div class="hero-kicker">Cabinet de conseil</div>
-                <h1 class="hero-title">
-                    Gouvernance, Cybersécurité<br>
-                    et Intelligence Artificielle
-                </h1>
-                <p class="hero-subtitle">
-                    Nous accompagnons les DSI, directions métiers et équipes projets dans la
-                    conception, la sécurisation et la transformation de leurs systèmes d'information —
-                    de la stratégie à la mise en production.
-                </p>
-                <div class="hero-actions">
-                    <a href="expertise.html" class="btn btn-primary">Découvrir nos expertises</a>
-                    <a href="contact.html" class="btn btn-ghost">Nous contacter</a>
-                </div>
-            </div>
+  <!-- LOGO: actual image + floating labels -->
+  <div class="hla">
+    <div class="li">
+      <div class="lg"></div>
+      <div class="logo-img-wrap" style="position:relative;">
+        <span style="position:absolute;top:57%;left:47%;transform:translate(-50%,-50%);width:120%;height:120%;border-radius:50%;background:rgba(255,255,255,0.5);z-index:0;"></span>
+        <img src="assets/images/LOGO_NOBG.PNG" alt="xSOM Logo" class="logo-hero-img" style="position:relative;z-index:1;">
+      </div>
 
-            <aside class="hero-card" aria-label="Aperçu des interventions">
-                <div class="hero-card-title">Trois pôles d'expertise</div>
-                <div class="hero-metrics">
-                    <div>
-                        <div class="metric-label">Télécom, Réseau & Cybersécurité</div>
-                        <div class="metric-label">Infrastructures IA & Cloud Souverain</div>
-                        <div class="metric-label">Data Science, ML & Automatisation</div>
-                    </div>
-                </div>
-                <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; margin-top: 0.5rem;">
-                    <div class="metric-label" style="opacity:0.55; font-size: 0.78rem; margin-bottom: 0.5rem;">Secteurs</div>
-                </div>
-                <div class="hero-tags">
-                    <span class="tag">Secteur public</span>
-                    <span class="tag">Énergie</span>
-                    <span class="tag">Banque & Assurance</span>
-                    <span class="tag">Télécom</span>
-                    <span class="tag">Industrie</span>
-                </div>
-            </aside>
-        </div>
-    </section>
+      <!-- Thin connector lines -->
+      <svg class="clines" viewBox="0 0 480 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="155" y1="310" x2="90" y2="380" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 3"/>
+        <line x1="295" y1="160" x2="370" y2="80" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 3"/>
+        <line x1="320" y1="300" x2="395" y2="340" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 3"/>
+      </svg>
 
-    <!-- ========== METRICS ========== -->
-    <section class="section metrics-section" style="background: var(--primary); color: #fff; padding: 3rem 0;">
-        <div class="wrapper">
-            <div class="metrics-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 800px; margin: 0 auto;">
-                <div class="metric">
-                    <div class="metric-value" style="color: var(--accent-light);">18 ans</div>
-                    <div class="metric-label" style="color: rgba(255,255,255,0.7);">d'expérience<br><span style="opacity:0.5;">(créé en 2007)</span></div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value" style="color: var(--accent-light);">3</div>
-                    <div class="metric-label" style="color: rgba(255,255,255,0.7);">pôles d'expertise<br><span style="opacity:0.5;">intégrés</span></div>
-                </div>
-                <div class="metric">
-                    <div class="metric-icon" style="color: var(--accent-light);">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M2 12h20"/>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                        </svg>
-                    </div>
-                    <div class="metric-label" style="color: rgba(255,255,255,0.7);">Interventions<br>à l'international</div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="ll label-tl"><span class="ld"></span>Télécom & Cyber<span class="ls">Réseau · Conformité · Résilience</span></div>
+      <div class="ll label-tr"><span class="ld"></span>Infrastructures IA<span class="ls">Cloud · GPU · Green IT</span></div>
+      <div class="ll label-br"><span class="ld"></span>Data Science & ML<span class="ls">MLOps · Automatisation · Prod</span></div>
+    </div>
+  </div>
+</div>
+</section>
 
-    <!-- ========== 3 PILIERS D'EXPERTISE ========== -->
-    <section class="section">
-        <div class="wrapper">
-            <header class="section-header" style="text-align: center; max-width: 750px; margin: 0 auto 3rem;">
-                <div class="section-kicker">Notre offre</div>
-                <h2 class="section-title">Trois pôles pour transformer votre SI</h2>
-                <p class="section-description" style="margin: 0 auto;">
-                    Une offre structurée autour de trois piliers complémentaires, couvrant
-                    le cycle complet de vos projets de transformation.
-                </p>
-            </header>
+<!-- ===== TICKER ===== -->
+<div class="tk"><div class="tkt">
+<span class="tki">Gouvernance SI</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Cybersécurité</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Architecture Cloud</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Data Science</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">MLOps</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">AI Act & DORA</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Schéma directeur</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">PCA / PRA</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Green IT</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Transformation digitale</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Monitoring & FinOps</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">CTO as a Service</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Gouvernance SI</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Cybersécurité</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Architecture Cloud</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Data Science</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">MLOps</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">AI Act & DORA</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Schéma directeur</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">PCA / PRA</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Green IT</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Transformation digitale</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">Monitoring & FinOps</span><span class="tki"><span class="sep"></span></span>
+<span class="tki">CTO as a Service</span><span class="tki"><span class="sep"></span></span>
+</div></div>
 
-            <div class="pillars-grid">
-                <!-- Pilier 1 -->
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2l8 4v6c0 5-3 9-8 10-5-1-8-5-8-10V6l8-4z"/>
-                        </svg>
-                    </div>
-                    <div class="pillar-title">Télécom, Réseau & Cybersécurité</div>
-                    <p class="pillar-desc">
-                        Gouvernance des infrastructures réseau, programmes de conformité cyber
-                        (LPM, DORA, NIS) et résilience opérationnelle.
-                    </p>
-                    <div class="pillar-items">
-                        <span>Architecture réseau & SI</span>
-                        <span>Programmes cyber réglementaires</span>
-                        <span>PCA/PRA & continuité d'activité</span>
-                        <span>Audit et conformité</span>
-                    </div>
-                </div>
+<!-- ===== PARTNERS ===== -->
+<div class="pt">
+  <div class="w"><div class="pt-title">Ils nous ont fait confiance</div></div>
+  <div class="pt-scroll">
+    <div class="pt-track">
+      <img src="assets/images/partenaires/Credit-Agricole-logo.png" alt="Crédit Agricole">
+      <img src="assets/images/partenaires/EDF.png" alt="EDF">
+      <img src="assets/images/partenaires/LA-POSTE-BANQUE-POSTALE.png" alt="La Banque Postale">
+      <img src="assets/images/partenaires/logo-siplec_eleclerc_H_RVB_OK.png" alt="E.Leclerc">
+      <img src="assets/images/partenaires/logo.png" alt="Partner">
+      <!-- Duplicate for seamless infinite scroll -->
+      <img src="assets/images/partenaires/Credit-Agricole-logo.png" alt="Crédit Agricole">
+      <img src="assets/images/partenaires/EDF.png" alt="EDF">
+      <img src="assets/images/partenaires/LA-POSTE-BANQUE-POSTALE.png" alt="La Banque Postale">
+      <img src="assets/images/partenaires/logo-siplec_eleclerc_H_RVB_OK.png" alt="E.Leclerc">
+      <img src="assets/images/partenaires/logo.png" alt="Partner">
+    </div>
+  </div>
+</div>
 
-                <!-- Pilier 2 -->
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2"/>
-                            <path d="M8 21h8"/><path d="M12 17v4"/>
-                            <path d="M7 8h2m2 0h2m2 0h2"/>
-                        </svg>
-                    </div>
-                    <div class="pillar-title">Infrastructures IA & Cloud</div>
-                    <p class="pillar-desc">
-                        Déploiement d'architectures cloud souveraines, data centers optimisés
-                        pour l'IA et observabilité full-stack.
-                    </p>
-                    <div class="pillar-items">
-                        <span>Cloud souverain & Green IT</span>
-                        <span>Architectures GPU / entraînement</span>
-                        <span>Monitoring, FinOps & AIOps</span>
-                        <span>Conformité AI Act & DORA</span>
-                    </div>
-                </div>
+<!-- ===== 3 PILLARS ===== -->
+<section class="ps"><div class="w">
+<div class="sh rv">
+  <div class="sk">Notre offre</div>
+  <h2 class="st">Trois pôles pour transformer votre SI</h2>
+  <p class="sd">Une offre structurée autour de trois piliers complémentaires, du diagnostic à l'industrialisation.</p>
+</div>
+<div class="pg">
+  <div class="pl p1" style="transition-delay:.1s">
+    <div class="pi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3 9-8 10-5-1-8-5-8-10V6l8-4z"/></svg></div>
+    <div class="pn">Pôle 01</div>
+    <h3>Télécom, Réseau & Cybersécurité</h3>
+    <p>Gouvernance des infrastructures réseau, programmes de conformité cyber (LPM, DORA, NIS) et résilience opérationnelle.</p>
+    <div class="ptgs"><span class="ptg">Architecture réseau</span><span class="ptg">Conformité cyber</span><span class="ptg">PCA / PRA</span><span class="ptg">Audit</span></div>
+  </div>
+  <div class="pl p2" style="transition-delay:.22s">
+    <div class="pi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
+    <div class="pn">Pôle 02</div>
+    <h3>Infrastructures IA & Cloud Souverain</h3>
+    <p>Architectures cloud souveraines, data centers optimisés IA, monitoring full-stack et conformité AI Act.</p>
+    <div class="ptgs"><span class="ptg">Cloud souverain</span><span class="ptg">GPU / entraînement</span><span class="ptg">FinOps & AIOps</span><span class="ptg">Green IT</span></div>
+  </div>
+  <div class="pl p3" style="transition-delay:.34s">
+    <div class="pi"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18H7a3 3 0 0 1-3-3v-1a3 3 0 0 1 3-3h1"/><path d="M15 6h2a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3h-2"/><path d="M8 6a4 4 0 0 1 8 0v12a4 4 0 0 1-8 0V6z"/></svg></div>
+    <div class="pn">Pôle 03</div>
+    <h3>Data Science, ML & Automatisation</h3>
+    <p>Modélisation, pipelines de données, MLOps et déploiement de solutions IA industrialisées en production.</p>
+    <div class="ptgs"><span class="ptg">Feature engineering</span><span class="ptg">APIs & scoring</span><span class="ptg">MLOps & CI/CD</span><span class="ptg">Gouvernance</span></div>
+  </div>
+</div>
+</div></section>
 
-                <!-- Pilier 3 -->
-                <div class="pillar-card">
-                    <div class="pillar-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 18H7a3 3 0 0 1-3-3v-1a3 3 0 0 1 3-3h1"/>
-                            <path d="M15 6h2a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3h-2"/>
-                            <path d="M8 6a4 4 0 0 1 8 0v12a4 4 0 0 1-8 0V6z"/>
-                        </svg>
-                    </div>
-                    <div class="pillar-title">Data Science, ML & Automatisation</div>
-                    <p class="pillar-desc">
-                        Modélisation, pipelines de données, MLOps et déploiement de solutions
-                        IA industrialisées en production.
-                    </p>
-                    <div class="pillar-items">
-                        <span>Feature engineering & modélisation</span>
-                        <span>Pipelines, APIs & scoring</span>
-                        <span>MLOps, CI/CD & monitoring</span>
-                        <span>Gouvernance & souveraineté des modèles</span>
-                    </div>
-                </div>
-            </div>
+<!-- ===== METRICS ===== -->
+<div class="mb"><div class="w"><div class="mr rv">
+<div><div class="mv">18 ans</div><div class="ml">d'expérience (créé en 2007)</div></div>
+<div><div class="mv">3 pôles</div><div class="ml">d'expertise intégrés</div></div>
+<div><div class="mv">FR · US</div><div class="ml">Interventions internationales</div></div>
+<div><div class="mv">100%</div><div class="ml">indépendant & opérationnel</div></div>
+</div></div></div>
 
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="expertise.html" class="btn btn-primary btn-large">
-                    Découvrir toutes nos expertises
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-            </div>
-        </div>
-    </section>
+<!-- ===== APPROACH ===== -->
+<section class="as"><div class="w ag2" style="color:#0a1628;">
+<div>
+  <div class="sh rv" style="text-align:left;color:#0a1628;">
+    <div class="sk">Notre approche</div>
+    <h2 class="st">Un conseil proche du terrain,<br>orienté résultats</h2>
+    <p class="sd" style="margin:0;color:#0f2038;">Pragmatisme, co-construction et transparence à chaque étape.</p>
+  </div>
+  <div class="al">
+    <div class="ai" style="transition-delay:.1s;color:#0a1628;"><div class="ac"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>Co-construction</strong><span style="color:#0f2038;">Interventions menées aux côtés de vos équipes, en mode collaboratif.</span></div></div>
+    <div class="ai" style="transition-delay:.18s;color:#0a1628;"><div class="ac"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>Pragmatisme</strong><span style="color:#0f2038;">Prise en compte des contraintes opérationnelles et budgétaires dès le cadrage.</span></div></div>
+    <div class="ai" style="transition-delay:.26s;color:#0a1628;"><div class="ac"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>Transparence</strong><span style="color:#0f2038;">Communication claire sur les enjeux, risques et arbitrages.</span></div></div>
+    <div class="ai" style="transition-delay:.34s;color:#0a1628;"><div class="ac"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>Livrables actionnables</strong><span style="color:#0f2038;">Documents clairs, exploitables et réutilisables par vos équipes.</span></div></div>
+  </div>
+</div>
+<div class="ss">
+  <div class="sc"><div class="sv" style="color:var(--accent)">18+</div><div class="slb" style="color:#0a1628;">années d'expérience en télécoms, réseaux et infrastructures critiques</div></div>
+  <div class="sc stc"><h4 style="color:#0a1628;">Secteurs d'intervention</h4><div class="stgs">
+    <span class="stg" style="color:#0a1628;border-color:#e0e6ef;">Secteur Public</span>
+    <span class="stg" style="color:#0a1628;border-color:#e0e6ef;">Énergie</span>
+    <span class="stg" style="color:#0a1628;border-color:#e0e6ef;">Banque & Assurance</span>
+    <span class="stg" style="color:#0a1628;border-color:#e0e6ef;">Télécommunication</span>
+    <span class="stg" style="color:#0a1628;border-color:#e0e6ef;">Grande Distribution</span>
+    <span class="stg" style="color:#0a1628;border-color:#e0e6ef;">Industrie</span>
+  </div></div>
+  <div class="sc">
+    <div style="font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#0a1628;margin-bottom:.65rem">Types de missions</div>
+    <div style="display:flex;flex-direction:column;gap:.35rem">
+      <span style="font-size:.84rem;color:#0a1628;">→ Audits & cadrages</span>
+      <span style="font-size:.84rem;color:#0a1628;">→ AMOA & PMO</span>
+      <span style="font-size:.84rem;color:#0a1628;">→ Assistance à maîtrise d'œuvre</span>
+      <span style="font-size:.84rem;color:#0a1628;">→ Accompagnement long terme</span>
+    </div>
+  </div>
+</div>
+</div></section>
 
-    <!-- ========== PARTNERS ========== -->
-    <section class="section partners-section">
-        <div class="wrapper">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 2rem; font-size: 1.4rem;">Ils nous ont fait confiance</h2>
-            <div class="partners-carousel">
-                <div class="partners-track">
-                    <img src="assets/images/partenaires/Credit-Agricole-logo.png" alt="Crédit Agricole">
-                    <img src="assets/images/partenaires/EDF.png" alt="EDF">
-                    <img src="assets/images/partenaires/LA-POSTE-BANQUE-POSTALE.png" alt="La Banque Postale">
-                    <img src="assets/images/partenaires/logo-siplec_eleclerc_H_RVB_OK.png" alt="E.Leclerc">
-                    <img src="assets/images/partenaires/logo.png" alt="Partner">
-                    <img src="assets/images/partenaires/Credit-Agricole-logo.png" alt="Crédit Agricole">
-                    <img src="assets/images/partenaires/EDF.png" alt="EDF">
-                    <img src="assets/images/partenaires/LA-POSTE-BANQUE-POSTALE.png" alt="La Banque Postale">
-                    <img src="assets/images/partenaires/logo-siplec_eleclerc_H_RVB_OK.png" alt="E.Leclerc">
-                    <img src="assets/images/partenaires/logo.png" alt="Partner">
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ===== CTA ===== -->
+<section class="cs">
+<div class="ob ob1"></div><div class="ob ob2"></div>
+<div class="cc w rv">
+  <div class="sk" style="color:var(--blue-bright);border-color:rgba(37,99,235,.2);background:rgba(37,99,235,.04)">Carrières</div>
+  <h2 class="ctt">Rejoignez nos équipes</h2>
+  <p class="cds">Vous êtes consultant(e) expérimenté(e) en SI et souhaitez rejoindre une équipe à taille humaine, orientée expertise ?</p>
+  <div class="cas"><a href="join.html" class="btn bp">Voir nos offres</a><a href="contact.html" class="btn bo">Nous contacter</a></div>
+</div>
+</section>
 
-    <!-- ========== APPROCHE ========== -->
-    <section class="section">
-        <div class="wrapper">
-            <div class="approach-grid">
-                <div class="approach-content">
-                    <header class="section-header">
-                        <div class="section-kicker">Notre approche</div>
-                        <h2 class="section-title">Un conseil proche du terrain, orienté résultats</h2>
-                        <p class="section-description">
-                            Chez xSOM Consulting, nous privilégions une approche pragmatique et collaborative,
-                            adaptée aux réalités de votre organisation.
-                        </p>
-                    </header>
-                    <ul class="list-check-modern">
-                        <li>
-                            <div class="check-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            </div>
-                            <div>
-                                <strong>Co-construction</strong>
-                                <p>Interventions menées aux côtés de vos équipes, en mode collaboratif.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="check-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            </div>
-                            <div>
-                                <strong>Pragmatisme</strong>
-                                <p>Prise en compte des contraintes opérationnelles et budgétaires dès le cadrage.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="check-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            </div>
-                            <div>
-                                <strong>Transparence</strong>
-                                <p>Communication claire sur les enjeux, les risques et les arbitrages.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="check-icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                            </div>
-                            <div>
-                                <strong>Livrables actionnables</strong>
-                                <p>Documents clairs, exploitables et réutilisables par vos équipes.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="approach-sidebar">
-                    <div class="sectors-box">
-                        <div class="sectors-icon">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                                <line x1="12" y1="22.08" x2="12" y2="12"/>
-                            </svg>
-                        </div>
-                        <h3>Secteurs d'intervention</h3>
-                        <div class="sectors-tags">
-                            <span class="sector-tag">Secteur Public</span>
-                            <span class="sector-tag">Énergie</span>
-                            <span class="sector-tag">Banque & Assurance</span>
-                            <span class="sector-tag">Télécommunication</span>
-                            <span class="sector-tag">Grande Distribution</span>
-                            <span class="sector-tag">Industrie</span>
-                        </div>
-                    </div>
-                    <div class="missions-box">
-                        <h4>Types de missions</h4>
-                        <ul>
-                            <li>Audits & cadrages</li>
-                            <li>AMOA & PMO</li>
-                            <li>Assistance à maîtrise d'œuvre</li>
-                            <li>Accompagnement long terme</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ===== FOOTER ===== -->
+<footer><div class="w">
+<div class="fg">
+  <div class="fb"><div class="lo"><img src="assets/images/LOGO.png" alt="xSOM" style="width:26px;height:26px"><div class="lo-t"><a href="index.html">xSOM Consulting</a></div></div><p>Cabinet de conseil en informatique. Stratégie, cybersécurité, infrastructures IA et Data Science.</p></div>
+  <div class="fl">
+    <div><h5>Expertises</h5><ul><li><a href="expertise.html">Télécom & Cyber</a></li><li><a href="ia.html">IA & Data Science</a></li><li><a href="vision.html">Vision & Mission</a></li></ul></div>
+    <div><h5>Cabinet</h5><ul><li><a href="about.html">Qui nous sommes</a></li><li><a href="join.html">Nous rejoindre</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  </div>
+</div>
+<div class="fbot"><span>© 2026 xSOM Consulting. Tous droits réservés.</span><span>Paris · France · USA</span></div>
+</div></footer>
 
-    <!-- ========== CARRIÈRES CTA ========== -->
-    <section class="section" style="background: var(--primary); color: #fff; padding: 5rem 0;">
-        <div class="wrapper" style="text-align: center; max-width: 700px;">
-            <div class="section-kicker" style="background: rgba(200,164,86,0.15); border-color: rgba(200,164,86,0.3); color: var(--accent-light);">Carrières</div>
-            <h2 class="section-title" style="color: #fff; margin-bottom: 1rem;">Rejoignez nos équipes</h2>
-            <p style="color: rgba(255,255,255,0.75); margin-bottom: 2rem; line-height: 1.75;">
-                Vous êtes consultant(e) expérimenté(e) en SI et souhaitez rejoindre une équipe à taille humaine,
-                orientée expertise et accompagnement durable ?
-            </p>
-            <a href="join.html" class="btn btn-accent">Voir nos offres</a>
-        </div>
-    </section>
-</main>
-
-<footer></footer>
+<script>
+(function(){
+var t=document.getElementById('mt'),n=document.getElementById('mn');
+if(t&&n)t.addEventListener('click',function(){n.classList.toggle('open')});
+var h=document.getElementById('sh');
+window.addEventListener('scroll',function(){h.classList.toggle('scrolled',window.scrollY>50)},{passive:true});
+var o=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('visible')})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv,.pl,.ai').forEach(function(el){o.observe(el)});
+})();
+</script>
 </body>
 </html>

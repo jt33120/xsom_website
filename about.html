@@ -1,130 +1,89 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Qui nous sommes – xSOM Consulting</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Découvrez l'histoire, les valeurs et la façon de travailler du cabinet xSOM Consulting.">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/png" href="assets/images/LOGO.png">
-    <script src="assets/js/navbar.js" defer></script>
-    <script src="assets/js/footer.js" defer></script>
-    <script src="assets/js/translate.js" defer></script>
-    <script src="assets/js/animations.js" defer></script>
+<meta charset="UTF-8">
+<title>Le cabinet – xSOM Consulting</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Expertises xSOM Consulting : stratégie SI, architecture, cybersécurité, infrastructures IA, Data Science.">
+<link rel="icon" type="image/png" href="assets/images/LOGO_NOBG.PNG">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/header.js" defer></script>
+<script src="assets/js/navbar.js" defer></script>
+<script src="assets/js/footer.js" defer></script>
+<script src="assets/js/carousel.js" defer></script>
+<script src="assets/js/animations.js" defer></script>
 </head>
 <body>
-<header>
-    <div class="wrapper navbar">
-        <div class="logo">
-            <img src="assets/images/LOGO.png" alt="xSOM Consulting Logo">
-            <div>
-                <a href="index.html">xSOM Consulting</a>
-                <span>Conseil en informatique</span>
-            </div>
-        </div>
-        <div id="nav-container"></div>
-    </div>
-</header>
+<script src="assets/js/header.js" defer></script>
 
 <main>
-    <section class="page-hero">
-        <div class="wrapper">
-            <h1 class="page-title">Qui nous sommes</h1>
-            <p class="page-subtitle">
-                xSOM Consulting est un cabinet de conseil indépendant dédié aux enjeux
-                de transformation et de performance des systèmes d'information.
-            </p>
-        </div>
-    </section>
+<section class="page-hero section section-alt">
+  <div class="w">
+    <h1 class="page-title">Qui nous sommes</h1>
+    <p class="page-subtitle">xSOM Consulting est un cabinet de conseil indépendant dédié aux enjeux de transformation et de performance des systèmes d'information.</p>
+  </div>
+</section>
 
-    <section class="section">
-        <div class="wrapper two-columns">
-            <div>
-                <header class="section-header">
-                    <div class="section-kicker">Notre identité</div>
-                    <h2 class="section-title">Un cabinet à taille humaine, proche de ses clients</h2>
-                </header>
-                <p class="section-description">
-                    Nous intervenons auprès de directions informatiques et métiers qui souhaitent
-                    sécuriser leurs décisions, structurer leurs projets et accélérer leur
-                    transformation numérique, sans perdre en maîtrise.
-                </p>
-                <p class="section-description" style="margin-top: 1rem;">
-                    Notre différence : la capacité à combiner expérience de terrain, vision
-                    d'architecture et accompagnement au changement pour transformer les idées en
-                    résultats concrets.
-                </p>
-            </div>
-            <div>
-                <div class="card premium-card">
-                    <div class="card-subtitle">Nos principes</div>
-                    <h3 class="card-title">Ce qui guide nos missions</h3>
-                    <ul class="list-check">
-                        <li>Indépendance vis-à-vis des éditeurs et intégrateurs.</li>
-                        <li>Transparence sur les enjeux, les risques et les contraintes.</li>
-                        <li>Recherche de solutions pragmatiques et soutenables.</li>
-                        <li>Transmission : faire grandir vos équipes à chaque mission.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- IDENTITÉ (white background) -->
+<section class="section section-white">
+  <div class="w two-col">
+    <div class="rv">
+      <div class="sh"><div class="sk">Notre identité</div><h2 class="st">Un cabinet à taille humaine, proche de ses clients</h2></div>
+      <p style="font-size:.9rem;color:var(--text-mid);line-height:1.65;margin-bottom:.75rem">Nous intervenons auprès de directions informatiques et métiers qui souhaitent sécuriser leurs décisions, structurer leurs projets et accélérer leur transformation numérique.</p>
+      <p style="font-size:.9rem;color:var(--text-mid);line-height:1.65">Notre différence : combiner expérience de terrain, vision d'architecture et accompagnement au changement pour transformer les idées en résultats concrets.</p>
+    </div>
+    <div class="rv">
+      <div class="highlight" style="padding:2rem">
+        <div class="card-sub">Nos principes</div>
+        <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:.75rem">Ce qui guide nos missions</h3>
+        <ul class="check-list">
+          <li>Indépendance vis-à-vis des éditeurs et intégrateurs.</li>
+          <li>Transparence sur les enjeux, les risques et les contraintes.</li>
+          <li>Recherche de solutions pragmatiques et soutenables.</li>
+          <li>Transmission : faire grandir vos équipes à chaque mission.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="section" style="background: var(--primary); color: #fff; padding: 3.5rem 0;">
-        <div class="wrapper">
-            <div class="metrics-grid two-items">
-                <div class="metric">
-                    <div class="metric-value" style="color: var(--accent-light);">18 ans</div>
-                    <div class="metric-label" style="color: rgba(255,255,255,0.7);">d'expérience<br><span style="opacity: 0.5;">(créé en 2007)</span></div>
-                </div>
-                <div class="metric">
-                    <div class="metric-icon" style="color: var(--accent-light);">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M2 12h20"/>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                        </svg>
-                    </div>
-                    <div class="metric-label" style="color: rgba(255,255,255,0.7);">Interventions<br>à l'international</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- METRICS (dark background) -->
+<div class="metrics-bar">
+  <div class="w">
+    <div class="metrics-row rv">
+      <div><div class="m-val">18 ans</div><div class="m-lbl">d'expérience (créé en 2007)</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--blue-bright);margin-bottom:.35rem"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <div class="m-lbl">Interventions internationales</div>
+      </div>
+      <div><div class="m-val">3 pôles</div><div class="m-lbl">d'expertise intégrés</div></div>
+      <div><div class="m-val">100%</div><div class="m-lbl">indépendant</div></div>
+    </div>
+  </div>
+</div>
 
-    <section class="section" style="background: var(--off-white);">
-        <div class="wrapper">
-            <header class="section-header" style="text-align: center; max-width: 600px; margin: 0 auto 3rem;">
-                <div class="section-kicker">Nos valeurs</div>
-                <h2 class="section-title">Engagés, exigeants et accessibles</h2>
-            </header>
-            <div class="card-grid">
-                <article class="card">
-                    <h3 class="card-title">Engagement</h3>
-                    <p class="card-text">
-                        Nous nous impliquons réellement dans les projets que nous accompagnons,
-                        avec un objectif clair : contribuer à des décisions éclairées et à des
-                        mises en œuvre réussies.
-                    </p>
-                </article>
-                <article class="card">
-                    <h3 class="card-title">Exigence</h3>
-                    <p class="card-text">
-                        Qualité des analyses, précision des livrables, rigueur dans la conduite
-                        des projets : nous portons un soin particulier à chaque étape.
-                    </p>
-                </article>
-                <article class="card">
-                    <h3 class="card-title">Proximité</h3>
-                    <p class="card-text">
-                        Nous travaillons en binôme avec vos équipes, dans un climat de confiance
-                        et de transparence, avec des interlocuteurs identifiés dans la durée.
-                    </p>
-                </article>
-            </div>
-        </div>
-    </section>
+<!-- VALEURS (white background) -->
+<section class="section section-white section-border">
+  <div class="w">
+    <div class="sh sh-c rv"><div class="sk">Nos valeurs</div><h2 class="st">Engagés, exigeants et accessibles</h2></div>
+    <div class="card-grid">
+      <div class="card rv"><h3>Engagement</h3><p>Nous nous impliquons réellement dans les projets, avec un objectif clair : contribuer à des décisions éclairées et à des mises en œuvre réussies.</p></div>
+      <div class="card rv"><h3>Exigence</h3><p>Qualité des analyses, précision des livrables, rigueur dans la conduite des projets à chaque étape.</p></div>
+      <div class="card rv"><h3>Proximité</h3><p>Nous travaillons en binôme avec vos équipes, dans un climat de confiance, avec des interlocuteurs identifiés dans la durée.</p></div>
+    </div>
+  </div>
+</section>
 </main>
-
-<footer></footer>
+<!-- ===== FOOTER ===== -->
+<footer><div class="w">
+<div class="fg">
+  <div class="fb"><div class="lo"><img src="assets/images/LOGO.png" alt="xSOM" style="width:26px;height:26px"><div class="lo-t"><a href="index.html">xSOM Consulting</a></div></div><p>Cabinet de conseil en informatique. Stratégie, cybersécurité, infrastructures IA et Data Science.</p></div>
+  <div class="fl">
+    <div><h5>Expertises</h5><ul><li><a href="expertise.html">Télécom & Cyber</a></li><li><a href="ia.html">IA & Data Science</a></li><li><a href="vision.html">Vision & Mission</a></li></ul></div>
+    <div><h5>Cabinet</h5><ul><li><a href="about.html">Qui nous sommes</a></li><li><a href="join.html">Nous rejoindre</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  </div>
+</div>
+<div class="fbot"><span>© 2026 xSOM Consulting. Tous droits réservés.</span><span>Paris · France · USA</span></div>
+</div></footer>
 </body>
 </html>

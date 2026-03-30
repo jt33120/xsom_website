@@ -1,209 +1,118 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>IA, Data Science & Automatisation – xSOM Consulting</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Conception et mise en production de solutions Data & IA : pipelines, modélisation, MLOps, déploiement à l'échelle et souveraineté technologique.">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/png" href="assets/images/LOGO.png">
-    <script src="assets/js/navbar.js" defer></script>
-    <script src="assets/js/footer.js" defer></script>
-    <script src="assets/js/translate.js" defer></script>
-    <script src="assets/js/animations.js" defer></script>
+<meta charset="UTF-8">
+<title>IA – xSOM Consulting</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Expertises xSOM Consulting : stratégie SI, architecture, cybersécurité, infrastructures IA, Data Science.">
+<link rel="icon" type="image/png" href="assets/images/LOGO_NOBG.PNG">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/header.js" defer></script>
+<script src="assets/js/navbar.js" defer></script>
+<script src="assets/js/footer.js" defer></script>
+<script src="assets/js/carousel.js" defer></script>
+<script src="assets/js/animations.js" defer></script>
 </head>
 <body>
-<header>
-    <div class="wrapper navbar">
-        <div class="logo">
-            <img src="assets/images/LOGO.png" alt="xSOM Consulting Logo">
-            <div>
-                <a href="index.html">xSOM Consulting</a>
-                <span>Conseil en informatique</span>
-            </div>
-        </div>
-        <div id="nav-container"></div>
-    </div>
+<header id="sh">
+<div class="w nb">
+  <div class="lo">
+  <div class="lo"><img src="assets/images/LOGO_NOBG.PNG" alt="xSOM"><div class="lo-t"><a href="index.html">xSOM Consulting</a><span>Conseil en informatique</span></div></div>
+  </div>
+  <nav id="mn">
+    <a href="index.html">Accueil</a>
+    <a href="expertise.html">Expertises</a>
+    <a href="ia.html" class="active">IA & Data</a>
+    <a href="vision.html">Vision</a>
+    <a href="about.html">Le cabinet</a>
+    <a href="join.html">Carrières</a>
+    <a href="contact.html" class="nc">Contact</a>
+  </nav>
+  <button class="mt" id="mt" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+</div>
 </header>
 
 <main>
-    <section class="page-hero">
-        <div class="wrapper">
-            <h1 class="page-title">IA, Data Science & Automatisation</h1>
-            <p class="page-subtitle">
-                Conception de solutions data & IA de bout en bout : du cadrage stratégique
-                à la mise en production industrielle.
-            </p>
-        </div>
-    </section>
+<section class="page-hero section section-alt">
+  <div class="w">
+    <h1 class="page-title">IA, Data Science & Automatisation</h1>
+    <p class="page-subtitle">Conception de solutions data & IA de bout en bout : du cadrage stratégique à la mise en production industrielle.</p>
+  </div>
+</section>
 
-    <!-- ========== POSITIONNEMENT ========== -->
-    <section class="section">
-        <div class="wrapper two-columns">
-            <div>
-                <header class="section-header">
-                    <div class="section-kicker">Notre positionnement</div>
-                    <h2 class="section-title">De l'exploration à l'industrialisation</h2>
-                </header>
-                <p class="section-description">
-                    Notre approche couvre l'ensemble du cycle de vie des projets IA : exploration
-                    des données, modélisation, validation, déploiement et monitoring en production.
-                    Nous accompagnons aussi bien les phases de cadrage stratégique que
-                    l'exécution technique.
-                </p>
-                <p class="section-description" style="margin-top: 1rem;">
-                    L'objectif : des solutions industrielles, exploitables, orientées business
-                    et expérience utilisateur — pas des prototypes qui restent dans un notebook.
-                </p>
-            </div>
-            <div>
-                <div class="highlight-box">
-                    <strong style="color: var(--gray-900);">Ce qui nous différencie</strong>
-                    <ul class="list-check" style="margin-top: 1rem;">
-                        <li>Plus de 20 ans d'expérience en télécoms, réseaux et infrastructures critiques.</li>
-                        <li>Priorisation de l'impact business et de l'expérience utilisateur.</li>
-                        <li>Intégration des contraintes d'hébergement et de conformité réglementaire.</li>
-                        <li>Capacité à déployer sur des environnements souverains.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- POSITIONNEMENT (white background) -->
+<section class="section section-white">
+  <div class="w two-col">
+    <div class="rv">
+      <div class="sh"><div class="sk">Notre positionnement</div><h2 class="st">De l'exploration à l'industrialisation</h2></div>
+      <p style="font-size:.9rem;color:var(--text-mid);line-height:1.65;margin-bottom:.75rem">Notre approche couvre l'ensemble du cycle de vie des projets IA : exploration des données, modélisation, validation, déploiement et monitoring en production.</p>
+      <p style="font-size:.9rem;color:var(--text-mid);line-height:1.65">L'objectif : des solutions industrielles, exploitables, orientées business — pas des prototypes qui restent dans un notebook.</p>
+    </div>
+    <div class="rv">
+      <div class="highlight">
+        <h4 style="font-size:.95rem;font-weight:700;margin-bottom:.75rem">Ce qui nous différencie</h4>
+        <ul class="check-list">
+          <li>Plus de 20 ans d'expérience en télécoms, réseaux et infrastructures critiques.</li>
+          <li>Priorisation de l'impact business et de l'expérience utilisateur.</li>
+          <li>Intégration des contraintes d'hébergement et de conformité réglementaire.</li>
+          <li>Capacité à déployer sur des environnements souverains.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- ========== 5 DOMAINES ========== -->
-    <section class="section" style="background: var(--off-white);">
-        <div class="wrapper">
-            <header class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">
-                <div class="section-kicker">Domaines d'intervention</div>
-                <h2 class="section-title">Cinq blocs de compétences intégrés</h2>
-                <p class="section-description" style="margin: 0 auto;">
-                    Offre complète couvrant le cycle de vie des projets IA,
-                    du prototype à la production à grande échelle.
-                </p>
-            </header>
+<!-- 5 DOMAINES (clear background) -->
+<section class="section section-alt section-border">
+  <div class="w">
+    <div class="sh sh-c rv"><div class="sk">Domaines d'intervention</div><h2 class="st">Cinq blocs de compétences intégrés</h2><p class="sd">Offre complète couvrant le cycle de vie des projets IA, du prototype à la production à grande échelle.</p></div>
+    <div class="card-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="card rv"><div class="card-sub">Data Science & ML</div><h3>Modélisation & validation</h3><p>Feature engineering, entraînement supervisé et non-supervisé, évaluation robuste et tests de performance.</p></div>
+      <div class="card rv"><div class="card-sub">Conception de solutions</div><h3>Pipelines, APIs & interfaces</h3><p>Architecture full-stack pour intégrer modèles et pipelines : APIs de scoring, back-end, UI et workflows produit.</p></div>
+      <div class="card rv"><div class="card-sub">MLOps & Monitoring</div><h3>Production fiable</h3><p>Automatisation des déploiements, CI/CD des modèles, monitoring des dérives et observabilité.</p></div>
+      <div class="card rv"><div class="card-sub">Infra & déploiement</div><h3>Mise à l'échelle & Cloud</h3><p>Déploiement IA à l'échelle (GPU/CPU), optimisation coûts/performance, orchestration et sécurité cloud.</p></div>
+      <div class="card rv"><div class="card-sub">Souveraineté</div><h3>Réglementaire & éthique</h3><p>Architectures souveraines, conformité AI Act / DORA, gouvernance des données et modèles.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem"><a href="contact.html" class="btn bp">Discutons de votre projet IA</a></div>
+  </div>
+</section>
 
-            <div class="expertise-grid" style="grid-template-columns: repeat(3, 1fr);">
-                <article class="expertise-card">
-                    <div class="expertise-content">
-                        <div class="card-subtitle">Data Science & Machine Learning</div>
-                        <h3 class="card-title">Modélisation & validation</h3>
-                        <p class="card-text">
-                            Exploration des données, feature engineering, entraînement de modèles
-                            supervisés et non-supervisés, évaluation robuste et tests de performance.
-                        </p>
-                    </div>
-                </article>
+<!-- CAS D'USAGE (white background) -->
+<section class="section section-white">
+  <div class="w">
+    <div class="sh sh-c rv"><div class="sk">Cas d'usage</div><h2 class="st">L'IA au service de vos opérations</h2></div>
+    <div class="card-grid">
+      <div class="card rv"><h3>IA pour les Ops</h3><p>Automatisation des processus répétitifs, fiabilisation des chaînes de traitement.</p></div>
+      <div class="card rv"><h3>Qualité & prédictif</h3><p>Détection d'anomalies, maintenance prédictive, capacity planning.</p></div>
+      <div class="card rv"><h3>Pilotage & ROI</h3><p>Tableaux de bord intelligents, KPI prédictifs, aide à la décision.</p></div>
+      <div class="card rv"><h3>Expérience client</h3><p>Personnalisation des parcours, scoring comportemental, chatbots métiers.</p></div>
+      <div class="card rv"><h3>Sécurité & conformité</h3><p>Détection de menaces par ML, analyse comportementale, audit automatisé.</p></div>
+      <div class="card rv"><h3>Observabilité augmentée</h3><p>AIOps, corrélation d'événements multi-sources, alerting intelligent.</p></div>
+    </div>
+  </div>
+</section>
 
-                <article class="expertise-card">
-                    <div class="expertise-content">
-                        <div class="card-subtitle">Conception de solutions</div>
-                        <h3 class="card-title">Pipelines, APIs & interfaces</h3>
-                        <p class="card-text">
-                            Architecture full-stack pour intégrer modèles et pipelines :
-                            APIs de scoring, back-end, UI et workflows orientés produit.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="expertise-card">
-                    <div class="expertise-content">
-                        <div class="card-subtitle">MLOps & Monitoring</div>
-                        <h3 class="card-title">Production fiable</h3>
-                        <p class="card-text">
-                            Automatisation des déploiements, CI/CD des modèles, monitoring
-                            des dérives, tests de non-régression et observabilité.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="expertise-card">
-                    <div class="expertise-content">
-                        <div class="card-subtitle">Infrastructures & déploiement</div>
-                        <h3 class="card-title">Mise à l'échelle & Cloud</h3>
-                        <p class="card-text">
-                            Déploiement de systèmes IA à l'échelle (GPU/CPU), optimisation
-                            coûts/performance, orchestration et sécurité cloud.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="expertise-card">
-                    <div class="expertise-content">
-                        <div class="card-subtitle">Souveraineté & gouvernance</div>
-                        <h3 class="card-title">Enjeux réglementaires et éthiques</h3>
-                        <p class="card-text">
-                            Conception d'architectures souveraines, conformité (AI Act, DORA),
-                            gouvernance des données et des modèles.
-                        </p>
-                    </div>
-                </article>
-            </div>
-
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="contact.html" class="btn btn-primary btn-large">Discutons de votre projet IA</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CAS D'USAGE ========== -->
-    <section class="section">
-        <div class="wrapper">
-            <header class="section-header" style="text-align: center; max-width: 750px; margin: 0 auto 3rem;">
-                <div class="section-kicker">Cas d'usage</div>
-                <h2 class="section-title">L'IA au service de vos opérations</h2>
-            </header>
-            <div class="card-grid">
-                <article class="card">
-                    <h3 class="card-title">IA pour les Ops</h3>
-                    <p class="card-text">Automatisation des processus répétitifs, fiabilisation des chaînes de traitement, réduction des interventions manuelles.</p>
-                </article>
-                <article class="card">
-                    <h3 class="card-title">Qualité & prédictif</h3>
-                    <p class="card-text">Détection d'anomalies, maintenance prédictive, capacity planning et optimisation de la qualité de service.</p>
-                </article>
-                <article class="card">
-                    <h3 class="card-title">Pilotage & ROI</h3>
-                    <p class="card-text">Tableaux de bord intelligents, KPI prédictifs, aide à la décision pour les arbitrages budgétaires et stratégiques.</p>
-                </article>
-                <article class="card">
-                    <h3 class="card-title">Expérience client</h3>
-                    <p class="card-text">Personnalisation des parcours, scoring comportemental, self-care augmenté et chatbots métiers.</p>
-                </article>
-                <article class="card">
-                    <h3 class="card-title">Sécurité & conformité</h3>
-                    <p class="card-text">Détection de menaces par ML, analyse comportementale des flux, audit automatisé de conformité.</p>
-                </article>
-                <article class="card">
-                    <h3 class="card-title">Observabilité augmentée</h3>
-                    <p class="card-text">AIOps, corrélation d'événements multi-sources, alerting intelligent et réduction du bruit opérationnel.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== SECTEURS ========== -->
-    <section class="section" style="background: var(--off-white);">
-        <div class="wrapper" style="max-width: 800px; text-align: center;">
-            <header class="section-header" style="text-align: center;">
-                <div class="section-kicker">Secteurs</div>
-                <h2 class="section-title">Une IA mesurable, maintenable et intégrée</h2>
-            </header>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 1.5rem;">
-                <span class="tag">Télécom</span>
-                <span class="tag">Biopharma</span>
-                <span class="tag">Mobilité</span>
-                <span class="tag">Banque & Finance</span>
-                <span class="tag">Secteur public</span>
-                <span class="tag">Énergie & Utilities</span>
-                <span class="tag">Infrastructure Critique</span>
-            </div>
-            <div style="margin-top: 2.5rem;">
-                <a href="contact.html" class="btn btn-primary">Nous contacter</a>
-            </div>
-        </div>
-    </section>
+<!-- SECTEURS (clear background) -->
+<section class="section section-alt section-border">
+  <div class="w rv" style="max-width:700px;text-align:center">
+    <div class="sh sh-c"><div class="sk">Secteurs</div><h2 class="st">Une IA mesurable, maintenable et intégrée</h2></div>
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;margin-top:1rem">
+      <span class="tag tag-lg">Télécom</span><span class="tag tag-lg">Biopharma</span><span class="tag tag-lg">Mobilité</span><span class="tag tag-lg">Banque & Finance</span><span class="tag tag-lg">Secteur public</span><span class="tag tag-lg">Énergie & Utilities</span><span class="tag tag-lg">Infrastructure Critique</span>
+    </div>
+    <div style="margin-top:2rem"><a href="contact.html" class="btn bp">Nous contacter</a></div>
+  </div>
+</section>
 </main>
-
-<footer></footer>
+<!-- ===== FOOTER ===== -->
+<footer><div class="w">
+<div class="fg">
+  <div class="fb"><div class="lo"><img src="assets/images/LOGO.png" alt="xSOM" style="width:26px;height:26px"><div class="lo-t"><a href="index.html">xSOM Consulting</a></div></div><p>Cabinet de conseil en informatique. Stratégie, cybersécurité, infrastructures IA et Data Science.</p></div>
+  <div class="fl">
+    <div><h5>Expertises</h5><ul><li><a href="expertise.html">Télécom & Cyber</a></li><li><a href="ia.html">IA & Data Science</a></li><li><a href="vision.html">Vision & Mission</a></li></ul></div>
+    <div><h5>Cabinet</h5><ul><li><a href="about.html">Qui nous sommes</a></li><li><a href="join.html">Nous rejoindre</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  </div>
+</div>
+<div class="fbot"><span>© 2026 xSOM Consulting. Tous droits réservés.</span><span>Paris · France · USA</span></div>
+</div></footer>
 </body>
 </html>

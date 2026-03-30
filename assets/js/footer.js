@@ -1,18 +1,18 @@
-// Footer configuration
+// Footer configuration (full corporate footer)
 const footerHTML = `
-    <div class="wrapper footer-inner">
-        <div class="footer-copyright" data-t="copyright">© xSOM Consulting – Tous droits réservés.</div>
-        <div class="footer-links">
-            <a href="cookies.html" data-t="legal">Mentions légales | Utilisation des cookies</a>
-            <span class="footer-separator">•</span>
-            <a href="https://www.linkedin.com/company/xsom-consulting" target="_blank" rel="noopener noreferrer" class="footer-linkedin" data-t="linkedin">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 0.3rem;">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-                Suivez-nous sur LinkedIn
-            </a>
+<div class="w">
+    <div class="fg">
+        <div class="fb">
+            <div class="lo"><img src="assets/images/LOGO.png" alt="xSOM" style="width:26px;height:26px"><div class="lo-t"><a href="index.html">xSOM Consulting</a></div></div>
+            <p>Cabinet de conseil en informatique. Stratégie, cybersécurité, infrastructures IA et Data Science.</p>
+        </div>
+        <div class="fl">
+            <div><h5>Expertises</h5><ul><li><a href="expertise.html">Télécom & Cyber</a></li><li><a href="ia.html">IA & Data Science</a></li><li><a href="vision.html">Vision & Mission</a></li></ul></div>
+            <div><h5>Cabinet</h5><ul><li><a href="about.html">Qui nous sommes</a></li><li><a href="join.html">Nous rejoindre</a></li><li><a href="contact.html">Contact</a></li></ul></div>
         </div>
     </div>
+    <div class="fbot"><span>© 2026 xSOM Consulting. Tous droits réservés.</span><span>Paris · France · USA</span></div>
+</div>
 `;
 
 const footerTranslations = {
@@ -43,18 +43,37 @@ function translateFooter(lang) {
     });
 }
 
-// Function to initialize footer
+// Injects the full footer and its styles
+function injectFooterStyles() {
+    if (!document.getElementById('xsom-footer-style')) {
+        var style = document.createElement('style');
+        style.id = 'xsom-footer-style';
+        style.textContent = `
+footer{padding:2.5rem 0 1.5rem;border-top:1px solid var(--border-s)}
+.fg{display:flex;justify-content:space-between;align-items:start;gap:2rem;flex-wrap:wrap}
+.fb p{font-size:.76rem;color:var(--text-dim);max-width:250px;margin-top:.55rem;line-height:1.5}
+.fl{display:flex;gap:2.5rem}
+.fl h5{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);margin-bottom:.55rem}
+.fl ul{display:flex;flex-direction:column;gap:.28rem}
+.fl a{font-size:.8rem;color:var(--text-mid);transition:color .2s}
+.fl a:hover{color:var(--white)}
+.fbot{margin-top:2rem;padding-top:1.15rem;border-top:1px solid var(--border-s);display:flex;justify-content:space-between;font-size:.7rem;color:var(--text-dim)}
+@media(max-width:768px){
+.fg{flex-direction:column}.fl{flex-direction:column;gap:1rem}
+.fbot{flex-direction:column;gap:.4rem;text-align:center}
+}
+`;
+        document.head.appendChild(style);
+    }
+}
+
 function initFooter() {
     const footer = document.querySelector('footer');
     if (!footer) return;
-    
-    // Insert footer HTML
+    injectFooterStyles();
     footer.innerHTML = footerHTML;
-    translateFooter(getLang());
-    window.addEventListener('storage', () => translateFooter(getLang()));
 }
 
-// Initialize footer when DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initFooter);
 } else {
