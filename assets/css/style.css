@@ -30,11 +30,11 @@
   border: 1px solid #e5e7eb;
 }
 .section-white .card-sub {
-  color: #bfa14d !important;
+  color: #bfc5ce !important;
 }
 .section-white .sk {
-  border-color: #f3e7c2;
-  background: #fdf8ec;
+  border-color: #e5e8ec;
+  background: #f7fafd;
 }
 .section-white .btn.bp {
   background: var(--blue);
@@ -56,7 +56,7 @@
   --navy:#0a1628;--navy-mid:#0f2038;--navy-light:#162d4a;
   --blue:#2563eb;--blue-bright:#3b82f6;--blue-glow:rgba(37,99,235,.25);
   --grey-arrow:#7b8a9e;--grey-light:#97a5b7;
-  --accent:#c8a456;--accent-glow:rgba(200,164,86,.15);
+  --accent:#bfc5ce;--accent-glow:rgba(191,197,206,.15);
   --white:#fff;--text-dim:rgba(255,255,255,.48);--text-mid:rgba(255,255,255,.72);
   --surface:rgba(255,255,255,.035);--surface-h:rgba(255,255,255,.065);
   --border-s:rgba(255,255,255,.06);--border-m:rgba(255,255,255,.11);
