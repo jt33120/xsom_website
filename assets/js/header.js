@@ -26,7 +26,7 @@ nav a:hover,nav a.active{color:var(--white)}
     <nav id="mn">
       <a href="index.html">Accueil</a>
       <a href="expertise.html">Expertises</a>
-      <a href="ia.html">IA & Data</a>
+      <a href="IA.html">IA & Data</a>
       <a href="vision.html">Vision</a>
       <a href="about.html">Le cabinet</a>
       <a href="join.html">Carrières</a>
